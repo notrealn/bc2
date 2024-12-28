@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function NavBar() {
   return (
-    <nav className="bg-gradient-to-r from-black to-red-700">
+    <nav className="bg-gradient-to-r from-black to-red-700 pl-4 pr-4">
       <div className="flex flex-row justify-between items-center flex-wrap p-2">
         <div className="flex flex-row flex-initial">
           <Image
@@ -18,27 +18,17 @@ export function NavBar() {
           </div>
         </div>
         <div className="flex flex-row gap-3 p-3 grow text-white text-center max-md:p-0 max-md:w-screen max-md:justify-center max-md:order-last">
-          <div className="border-2 rounded-lg border-white w-full max-w-24">
-            首页
-          </div>
-          <div className="border-2 rounded-lg border-white w-full max-w-24">
-            区域活动
-          </div>
-          <div className="border-2 rounded-lg border-white w-full max-w-24">
-            病友故事
-          </div>
-          <div className="border-2 rounded-lg border-white w-full max-w-24">
-            社区资源
-          </div>
-          <div className="border-2 rounded-lg border-white w-full max-w-24">
-            我们是谁
-          </div>
+          <PageLink text="首页" href="/" />
+          <PageLink text="区域活动" href="/" />
+          <PageLink text="病友故事" href="/" />
+          <PageLink text="社区资源" href="/" />
+          <PageLink text="我们是谁" href="/" />
         </div>
         <div className="">
-          <div className="flex flex-row items-center rounded-full bg-pink-200">
+          <div className="flex flex-row items-center rounded-full bg-pink-200 shadow-lg">
             <div className="text-xl p-3 pr-0">支持我们</div>
             <Image
-              className="border-4 rounded-full p-1 overflow-visible m-1"
+              className="border-4 border-pink-200 bg-pink-200 rounded-full p-1 overflow-visible m-1 shadow-xl"
               src="/support-us.svg"
               alt="support us!"
               width={48}
@@ -48,5 +38,13 @@ export function NavBar() {
         </div>
       </div>
     </nav>
+  )
+}
+
+function PageLink({ text, href }: { text: string; href: string }) {
+  return (
+    <a className="border-2 rounded-lg border-white w-full max-w-24" href={href}>
+      {text}
+    </a>
   )
 }
