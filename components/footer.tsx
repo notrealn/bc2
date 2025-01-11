@@ -7,19 +7,19 @@ export function Footer() {
       </div>
       <div className="flex flex-col">
         <div className="text-pink-200">美国服务区域</div>
-        <div>
-          美东北区域 <br />
-          美东南区域 <br />
-          美中区域 <br />
-          美西区域
+        <div className="flex flex-col">
+          <SmallLink text="美东北区域" href="/todo" />
+          <SmallLink text="美东南区域" href="/todo" />
+          <SmallLink text="美中区域" href="/todo" />
+          <SmallLink text="美西区域" href="/todo" />
         </div>
       </div>
       <div className="flex flex-col">
         <div className="text-pink-200">加拿大服务区域</div>
-        <div>
-          温哥华 <br />
-          多伦多 <br />
-          蒙特利尔
+        <div className="flex flex-col">
+          <SmallLink text="温哥华" href="/todo" />
+          <SmallLink text="多伦多" href="/todo" />
+          <SmallLink text="蒙特利尔" href="/todo" />
         </div>
       </div>
       <div className="flex flex-col">
@@ -59,5 +59,13 @@ export function Footer() {
         </a>
       </div>
     </footer>
+  )
+}
+
+function SmallLink({ text, href }: { text: string; href: string }) {
+  return (
+    <a href={href} className="hover:underline">
+      {text}
+    </a>
   )
 }

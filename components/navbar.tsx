@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 export function NavBar() {
   return (
@@ -19,10 +22,10 @@ export function NavBar() {
         </div>
         <div className="flex flex-row gap-3 p-3 grow text-white text-center max-md:p-0 max-md:w-screen max-md:justify-center max-md:order-last">
           <PageLink text="首页" href="/" />
-          <PageLink text="区域活动" href="/" />
-          <PageLink text="病友故事" href="/" />
-          <PageLink text="社区资源" href="/" />
-          <PageLink text="我们是谁" href="/" />
+          <PageLink text="区域活动" href="/todo" />
+          <PageLink text="病友故事" href="/todo" />
+          <PageLink text="社区资源" href="/todo" />
+          <PageLink text="我们是谁" href="/todo" />
         </div>
         <div className="">
           <div className="flex flex-row items-center rounded-full bg-pink-200 shadow-lg">
@@ -43,7 +46,10 @@ export function NavBar() {
 
 function PageLink({ text, href }: { text: string; href: string }) {
   return (
-    <a className="border-2 rounded-lg border-white w-full max-w-24" href={href}>
+    <a
+      className={`border-2 rounded-lg w-full max-w-24 border-white ${usePathname() === href ? 'bg-white/20' : ''}`}
+      href={href}
+    >
       {text}
     </a>
   )

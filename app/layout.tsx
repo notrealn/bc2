@@ -31,7 +31,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[max-content_1fr_max-content] min-h-screen`}
         >
-          <header className="">
+          <header>
             <NavBar />
           </header>
           <div>{children}</div>
