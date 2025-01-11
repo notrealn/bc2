@@ -80,7 +80,13 @@ function CircleLink({
     <a className="bg-amber-100 rounded-full p-16 relative m-4 mb-0" href={href}>
       <div className="absolute flex flex-col top-0 bottom-0 left-0 right-0 m-auto w-fit h-fit items-center">
         {text}
-        <Image src={svgPath} alt="hearts" width={50} height={40} />
+        <Image
+          className="size-auto"
+          src={svgPath}
+          alt="hearts"
+          width={50}
+          height={40}
+        />
       </div>
     </a>
   )
@@ -102,7 +108,13 @@ function RectLink({
     >
       <div className="absolute flex flex-col top-0 bottom-0 left-0 right-0 m-auto w-fit h-fit items-center">
         {text}
-        <Image src={svgPath} alt="hearts" width={50} height={40} />
+        <Image
+          className="size-auto"
+          src={svgPath}
+          alt="hearts"
+          width={50}
+          height={40}
+        />
       </div>
     </a>
   )
