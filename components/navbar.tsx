@@ -25,7 +25,7 @@ export function NavBar() {
           <PageLink text="区域活动" href="/todo" />
           <PageLink text="病友故事" href="/todo" />
           <PageLink text="社区资源" href="/todo" />
-          <PageLink text="我们是谁" href="/todo" />
+          <PageLink text="我们是谁" href="/about" />
         </div>
         <div className="">
           <div className="flex flex-row items-center rounded-full bg-pink-200 shadow-lg">
