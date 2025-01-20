@@ -45,7 +45,7 @@ export default function About() {
   )
 }
 
-export function TextInput({ text, big }: { text: string; big?: boolean }) {
+function TextInput({ text, big }: { text: string; big?: boolean }) {
   return (
     <>
       <label className="justify-self-end mr-1 mb-2 text-right" htmlFor={text}>
