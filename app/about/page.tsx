@@ -2,7 +2,7 @@
 
 import { mail } from '@/util/mail'
 import Form from 'next/form'
-import { useOptimistic, useState } from 'react'
+import { useOptimistic } from 'react'
 
 export default function About() {
   const [sending, setSending] = useOptimistic(false, () => true)
