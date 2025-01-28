@@ -20,7 +20,7 @@ export default function About() {
         <li className="m-2">填写联系表</li>
       </ul>
       <Form
-        className="grid grid-cols-[9rem_24rem] items-center max-w-lg ml-auto mr-auto"
+        className="grid grid-cols-[9rem_24rem] items-center max-w-lg ml-auto mr-auto mb-2"
         action={async (formdata) => {
           setSending(true)
           console.log('sending', Object.fromEntries(formdata.entries()))
