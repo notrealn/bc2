@@ -38,7 +38,7 @@ export default function About() {
         <input
           className="col-span-2 border border-pink-400 m-auto p-1 rounded-md"
           type="submit"
-          value={sending ? 'sending...' : 'sent'}
+          value={sending ? 'sending...' : 'send'}
         />
       </Form>
     </main>
