@@ -16,6 +16,7 @@ export default function About() {
         </p>
       </div>
       <ul className="flex flex-col items-center list-disc">
+        <li className="m-2">我们的邮箱: gigforever777@gmail.com</li>
         <li className="m-2">邮件发送给我们的义工</li>
         <li className="m-2">填写联系表</li>
       </ul>
