@@ -20,6 +20,7 @@ export async function register() {
     const metadata = await ytdl(link, {
       dumpJson: true,
       skipDownload: true,
+      cookies: './cookies.txt',
     })
     console.log(
       await ytdl(link, {
