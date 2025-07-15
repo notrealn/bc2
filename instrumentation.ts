@@ -21,19 +21,23 @@ const audioFormat = 'm4a'
 export async function register() {
   for (const link of audioLinks) {
     console.log(`starting ${link}`)
-    const metadata = await ytdl(link, {
-      dumpJson: true,
-      skipDownload: true,
-      //   cookies: './cookies.txt',
-    })
-    console.log(
-      await ytdl(link, {
-        output: '%(id)s.%(ext)s',
-        paths: audioPath,
-        extractAudio: true,
-        // cookies: './cookies.txt',
-        audioFormat: audioFormat,
+    try {
+      const metadata = await ytdl(link, {
+        dumpJson: true,
+        skipDownload: true,
+        //   cookies: './cookies.txt',
       })
-    )
+      console.log(
+        await ytdl(link, {
+          output: '%(id)s.%(ext)s',
+          paths: audioPath,
+          extractAudio: true,
+          // cookies: './cookies.txt',
+          audioFormat: audioFormat,
+        })
+      )
+    } catch (err) {
+      console.log(JSON.stringify(err))
+    }
   }
 }
