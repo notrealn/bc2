@@ -1,5 +1,4 @@
-import { Audio, audioData, audioLinks, audioPath } from '@/instrumentation'
-import { readdir } from 'fs/promises'
+import { audioLinks } from '@/instrumentation'
 
 export default function Resources() {
   return (
