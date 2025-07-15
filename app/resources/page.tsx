@@ -1,11 +1,12 @@
-import { audioLinks } from '@/instrumentation'
+// import { audioLinks } from '@/instrumentation'
 
 export default function Resources() {
   return (
     <main className="h-full flex flex-col justify-start items-stretch p-4 gap-2">
-      {audioLinks.map((data, i) => (
+      {/* {audioLinks.map((data, i) => (
         <VideoCard url={data} key={i} />
-      ))}
+      ))} */}
+      <VideoCard url="youtube.com" />
     </main>
   )
 }
