@@ -13,7 +13,8 @@
     "next": "15.1.2",
     "nodemailer": "^6.9.16",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "youtube-dl-exec": "^3.0.22"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
