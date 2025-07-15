@@ -9,11 +9,11 @@ export const audioLinks = [
   //   'https://www.youtube.com/watch?v=SaVrsSzAai4',
 ]
 
-export const audioPath = './public/audio'
+const audioPath = './public/audio'
 const audioFormat = 'm4a'
 
-export type Audio = { title: string; date: string; link: string; path: string }
-export const audioData: Audio[] = []
+// export type Audio = { title: string; date: string; link: string; path: string }
+// export const audioData: Audio[] = []
 
 export async function register() {
   for (const link of audioLinks) {
