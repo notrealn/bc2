@@ -23,9 +23,10 @@ export async function register() {
     })
     console.log(
       await ytdl(link, {
-        output: '%(title)s__%(webpage_url)s__%(id)s.%(ext)s',
+        output: '%(id)s.%(ext)s',
         paths: audioPath,
         extractAudio: true,
+        cookies: './cookies.txt',
         audioFormat: audioFormat,
       })
     )
