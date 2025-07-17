@@ -1,11 +1,23 @@
+import fs from 'fs/promises'
 import { NextRequest } from 'next/server'
+import path from 'path'
 
-export function GET(request: NextRequest) {
+export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
-  const query = searchParams.get('query') // e.g. `/api/search?query=hello`
+
+  if (searchParams.has('id')) {
+    const query = searchParams.get('id')
+
+    const filePath = path.resolve('.', `public/audio/${query}.opus`)
+    const fileBuffer = await fs.readFile(filePath)
+
+    return new Response(fileBuffer, {
+      headers: { 'Content-Type': 'audio/ogg' },
+    })
+  }
 
   return new Response(
-    JSON.stringify({ result: `You searched for: ${query}` }),
+    JSON.stringify(fs.readFile(path.resolve('.', 'public/audio/audio.json'))),
     {
       headers: { 'Content-Type': 'application/json' },
     }
