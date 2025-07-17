@@ -26,7 +26,7 @@ try {
 
   console.log(`loaded ${audios.length} audios`)
 } catch (_) {
-  fs.access(path.resolve('.', 'node_modules/youtube-dl-exec/bin/yt-dlp'))
+  await fs.access(path.resolve('.', 'node_modules/youtube-dl-exec/bin/yt-dlp'))
   audios = []
 
   for (const link of audioLinks) {
