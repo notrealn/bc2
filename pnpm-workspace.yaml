@@ -1,4 +1,0 @@
-onlyBuiltDependencies:
-  - es5-ext
-  - sharp
-  - youtube-dl-exec
