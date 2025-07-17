@@ -50,8 +50,8 @@ export function NavBar() {
         <div className="hidden lg:flex peer-has-[:checked]:flex flex-row grow items-center peer-has-[:checked]:flex-col peer-has-[:checked]:items-start peer-has-[:checked]:w-full gap-3">
           <PageLink text="首页" href="/" />
           <PageLink text="区域活动" href="/todo" />
-          <PageLink text="病友故事" href="/todo" />
-          <PageLink text="社区资源" href="/resources" />
+          <PageLink text="病友故事" href="/stories" />
+          <PageLink text="社区资源" href="/todo" />
           <PageLink text="我们是谁" href="/todo" />
           <PageLink text="联系我们" href="/contact-us" />
           <SupportUs />

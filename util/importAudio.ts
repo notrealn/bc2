@@ -15,7 +15,7 @@ const audioLinks = [
 export type Audio = { title: string; date: string; id: string; url: string }
 export let audios: Audio[] = []
 
-console.log(await fs.readFile(cookiesPath, { encoding: 'utf-8' }))
+// console.log(await fs.readFile(cookiesPath, { encoding: 'utf-8' }))
 
 try {
   await fs.access(jsonPath)
