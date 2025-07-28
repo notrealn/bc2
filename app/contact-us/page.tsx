@@ -2,10 +2,10 @@
 
 import { mail } from '@/util/mail'
 import Form from 'next/form'
-import { useOptimistic } from 'react'
+import { useActionState } from 'react'
 
 export default function About() {
-  const [sending, setSending] = useOptimistic(false, () => true)
+  const [sent, sendAction, isPending] = useActionState(() => true, false)
 
   return (
     <main className="flex flex-col text-pink-400">
@@ -27,9 +27,9 @@ export default function About() {
       <Form
         className="grid grid-cols-[9rem_24rem] items-center max-w-lg ml-auto mr-auto mb-2"
         action={async (formdata) => {
-          setSending(true)
           console.log('sending', Object.fromEntries(formdata.entries()))
           await mail(formdata)
+          sendAction()
         }}
       >
         <TextInput text="如何称呼你?" />
@@ -42,11 +42,19 @@ export default function About() {
         <TextInput text="希望获得什么支持？" big />
         <TextInput text="想对我们说的话" big />
         <input
-          className="col-span-2 border border-pink-400 m-auto p-1 rounded-md"
+          className="col-span-2 bg-pink-300 m-auto p-1 rounded-md text-black"
           type="submit"
-          value={sending ? 'sending...' : 'send'}
+          disabled={isPending}
+          value={isPending ? '...' : '提 交'}
         />
       </Form>
+      {!(!isPending && sent) || (
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-200 p-8 rounded-xl text-xl text-black drop-shadow-2xl">
+          已经提交！
+          <br />
+          我们会有姐妹联系你。
+        </div>
+      )}
     </main>
   )
 }

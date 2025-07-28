@@ -52,7 +52,7 @@ export function NavBar() {
           <PageLink text="区域活动" href="/todo" />
           <PageLink text="病友故事" href="/stories" />
           <PageLink text="社区资源" href="/todo" />
-          <PageLink text="我们是谁" href="/todo" />
+          <PageLink text="我们是谁" href="/about" />
           <PageLink text="联系我们" href="/contact-us" />
           <SupportUs />
         </div>

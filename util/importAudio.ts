@@ -28,33 +28,36 @@ try {
 
   console.log(`loaded ${audios.length} audios`)
 } catch (_) {
-  await fs.access(path.resolve('.', 'node_modules/youtube-dl-exec/bin/yt-dlp'))
   audios = []
 
   for (const link of audioLinks) {
-    console.log(`starting ${link}`)
-    const metadata = (await ytdl(link, {
-      dumpJson: true,
-      skipDownload: true,
-      cookies: cookiesPath,
-    })) as Payload
-
-    console.log(
-      await ytdl(link, {
-        output: '%(id)s.%(ext)s',
-        paths: path.resolve('.', 'public/audio'),
-        extractAudio: true,
+    try {
+      console.log(`starting ${link}`)
+      const metadata = (await ytdl(link, {
+        dumpJson: true,
+        skipDownload: true,
         cookies: cookiesPath,
-        audioFormat: 'opus',
-      })
-    )
+      })) as Payload
 
-    audios.push({
-      title: metadata.title,
-      date: metadata.upload_date,
-      id: metadata.id,
-      url: metadata.webpage_url,
-    })
+      console.log(
+        await ytdl(link, {
+          output: '%(id)s.%(ext)s',
+          paths: path.resolve('.', 'public/audio'),
+          extractAudio: true,
+          cookies: cookiesPath,
+          audioFormat: 'opus',
+        })
+      )
+
+      audios.push({
+        title: metadata.title,
+        date: metadata.upload_date,
+        id: metadata.id,
+        url: metadata.webpage_url,
+      })
+    } catch (err) {
+      console.log(`err ${err} when downloading ${link}`)
+    }
   }
 
   fs.writeFile(jsonPath, JSON.stringify(audios))
