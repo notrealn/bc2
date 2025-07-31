@@ -11,8 +11,16 @@ export default function About() {
   return (
     <main className="flex flex-col text-pink-400">
       <div className="bg-gradient-to-r from-black to-red-700 flex flex-col items-center p-2">
-        <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-          <Image src="/stickyNote.svg" alt="stickynote" />
+        <h1 className="text-2xl text-white mb-2 text-center">
+          如果你希望我们支持你、聆听你、陪你一起走过治疗之路， 请联系我们
+        </h1>
+        <div className="relative lg:absolute lg:top-1/2 lg:left-4 lg:transform lg:-translate-y-1/2">
+          <Image
+            src="/stickyNote.svg"
+            alt="stickynote"
+            width={180}
+            height={180}
+          />
           <div className="absolute inset-0 flex justify-center items-center z-10 text-black text-center">
             或者发邮件给我们：
             <br />
@@ -21,9 +29,6 @@ export default function About() {
             @gmail.com
           </div>
         </div>
-        <h1 className="text-2xl text-white mb-2 text-center">
-          如果你希望我们支持你、聆听你、陪你一起走过治疗之路， 请联系我们
-        </h1>
         <Form
           className="grid grid-cols-3 items-center max-w-2xl bg-pink-200 text-pink-900 gap-2 p-4 rounded-lg"
           action={async (formdata) => {

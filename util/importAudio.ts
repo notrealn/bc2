@@ -11,7 +11,7 @@ const cookiesPath = path.resolve('.', 'cookies.txt')
 const audioLinks = {
   stories: [
     // 'https://www.youtube.com/playlist?list=PL5NWTqwwolFpAurCIFfpj2oDuEYPeW1vH', // short
-    'https://youtube.com/playlist?list=PL5NWTqwwolFq1gtyqgnFtskxwFrDiP6yW',
+    // 'https://youtube.com/playlist?list=PL5NWTqwwolFq1gtyqgnFtskxwFrDiP6yW',
   ],
   seminars: ['https://youtu.be/JimW9Yg4gsc'],
 }
