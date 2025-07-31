@@ -63,9 +63,9 @@ export default function Home() {
       <div className="bg-gradient-to-r from-black to-red-700 text-white text-center text-xl p-2">
         当你孤单的时候，请相信，我们也正在找你，希望给你一个温暖的拥抱......
       </div>
-      <div className="flex flex-row justify-around gap-4 m-6 flex-wrap lg:flex-nowrap">
+      <div className="flex flex-row justify-evenly gap-4 m-6 flex-wrap lg:flex-nowrap">
         <Form
-          className="flex gap-2"
+          className="flex gap-2 grow-2"
           action={async (formdata) => {
             setSending(true)
             console.log('sending', Object.fromEntries(formdata.entries()))
@@ -78,7 +78,7 @@ export default function Home() {
             value={sending ? '...' : '给我们留言'}
           />
           <input
-            className="border rounded-md p-1 text-black min-h-16"
+            className="border rounded-md p-1 text-black min-h-16 w-72"
             type="text"
             name="feedback"
             id="feedback"
@@ -90,7 +90,10 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex flex-row gap-2">
-            <a href="/about" className="bg-pink-500 p-2 rounded-full m-auto">
+            <a
+              href="/contact-us"
+              className="bg-pink-500 p-2 rounded-full m-auto"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -107,7 +110,10 @@ export default function Home() {
             <p className="mt-auto mb-auto">联系我们：gigforever777@gmail.com</p>
           </div>
           <div className="flex flex-row gap-2">
-            <a href="/about" className="bg-blue-400 p-2 rounded-full m-auto">
+            <a
+              href="/contact-us"
+              className="bg-blue-400 p-2 rounded-full m-auto"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"

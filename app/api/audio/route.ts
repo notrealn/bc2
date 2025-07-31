@@ -1,3 +1,6 @@
+'use server'
+
+import { readAudioFile } from '@/util/importAudio'
 import fs from 'fs/promises'
 import { NextRequest } from 'next/server'
 import path from 'path'
@@ -16,10 +19,7 @@ export async function GET(request: NextRequest) {
     })
   }
 
-  return new Response(
-    JSON.stringify(fs.readFile(path.resolve('.', 'public/audio/audio.json'))),
-    {
-      headers: { 'Content-Type': 'application/json' },
-    }
-  )
+  return new Response(JSON.stringify(await readAudioFile()), {
+    headers: { 'Content-Type': 'application/json' },
+  })
 }
