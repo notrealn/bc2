@@ -3,6 +3,7 @@
 import { mail } from '@/util/mail'
 import Form from 'next/form'
 import { useActionState } from 'react'
+import Image from 'next/image'
 
 export default function About() {
   const [sent, sendAction, isPending] = useActionState(() => true, false)
@@ -11,7 +12,7 @@ export default function About() {
     <main className="flex flex-col text-pink-400">
       <div className="bg-gradient-to-r from-black to-red-700 flex flex-col items-center p-2">
         <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-          <img src="stickyNote.svg"></img>
+          <Image src="/stickyNote.svg" alt="stickynote" />
           <div className="absolute inset-0 flex justify-center items-center z-10 text-black text-center">
             或者发邮件给我们：
             <br />

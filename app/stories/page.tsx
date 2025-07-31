@@ -4,7 +4,10 @@ import { AudioCard } from '../../components/audioCard'
 export default function Resources() {
   const years = Array.from(
     new Set(audios?.stories?.map((audio) => audio.date.slice(0, 4)))
-  ).toSorted()
+  )
+
+  years.sort()
+
   return (
     <main className="flex flex-col md:flex-row justify-around max-w-4xl m-auto mt-4">
       {audios?.stories?.length == 0 ? null : (

@@ -1,11 +1,13 @@
+import Image from 'next/image'
+
 export default function ToDo() {
   return (
     <main className="bg-gradient-to-r from-black to-red-700 text-white text-center p-4 h-full flex flex-row w-full">
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-        <img src="stickyNote.svg"></img>
+        <Image src="/stickyNote.svg" alt="stickynote" />
         <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-black text-center text-xl">
           请联系我们<br></br>询问加入方式
-          <img src="/heart.svg"></img>
+          <Image src="/heart.svg" alt="heart" />
         </div>
       </div>
       <div className="flex-none p-4 text-lg">
@@ -57,10 +59,11 @@ export default function ToDo() {
 function TableRow({ a, b }: { a: string; b: string }) {
   return (
     <div className="flex flex-row gap-2">
-      <img
+      <Image
         src="/flower.webp"
         width={10}
         height={10}
+        alt="flower"
         className="object-contain"
       />
       <div className="text-left">{a}</div>
