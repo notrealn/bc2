@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Audio } from '@/util/importAudio'
+import { Audio } from '@/app/api/audio/getCachedAudio'
 
 export function AudioCard({ data, id }: { data: Audio; id?: string }) {
   const [showAudio, setShowAudio] = useState(false)

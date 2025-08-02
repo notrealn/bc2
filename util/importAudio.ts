@@ -1,3 +1,4 @@
+import { Audio } from '@/app/api/audio/getCachedAudio'
 import fs from 'fs/promises'
 import path from 'path'
 import { create, Payload } from 'youtube-dl-exec'
@@ -11,20 +12,13 @@ const cookiesPath = path.resolve('.', 'cookies.txt')
 const audioLinks = {
   stories: [
     // 'https://www.youtube.com/playlist?list=PL5NWTqwwolFpAurCIFfpj2oDuEYPeW1vH', // short
-    // 'https://youtube.com/playlist?list=PL5NWTqwwolFq1gtyqgnFtskxwFrDiP6yW',
+    'https://youtube.com/playlist?list=PL5NWTqwwolFq1gtyqgnFtskxwFrDiP6yW',
   ],
   seminars: ['https://youtu.be/JimW9Yg4gsc'],
 }
 
-export type Audio = {
-  title: string
-  date: string
-  id: string
-  url: string
-}
-export let audios: { [id: string]: Audio[] } = {}
+let audios: { [id: string]: Audio[] } = {}
 
-// export async function importAudio() {
 try {
   await fs.access(jsonPath)
 
@@ -65,13 +59,14 @@ try {
           }
         } else {
           const metadata = await getMetadata(link)
-          await downloadVideo(link)
           audios[id].push({
             title: metadata.title,
             date: metadata.upload_date,
             id: metadata.id,
             url: metadata.webpage_url,
           })
+          // console.log(audios)
+          await downloadVideo(link, true)
         }
       } catch (err) {
         console.log(`err ${JSON.stringify(err)} when downloading ${link}`)
@@ -81,16 +76,11 @@ try {
 
   fs.writeFile(jsonPath, JSON.stringify(audios))
 }
-// }
 
 export async function readAudioFile() {
   return JSON.parse(await fs.readFile(jsonPath, { encoding: 'utf-8' })) as {
     [id: string]: Audio[]
   }
-}
-
-export async function getCachedAudio() {
-  return audios
 }
 
 async function getMetadata(link: string) {
@@ -101,16 +91,14 @@ async function getMetadata(link: string) {
   })) as Payload
 }
 
-async function downloadVideo(link: string) {
-  console.log(
-    await ytdl(link, {
-      output: '%(id)s.%(ext)s',
-      paths: audioPath,
-      extractAudio: true,
-      cookies: cookiesPath,
-      audioFormat: 'opus',
-    })
-  )
-}
+async function downloadVideo(link: string, log?: boolean) {
+  const output = await ytdl(link, {
+    output: '%(id)s.%(ext)s',
+    paths: audioPath,
+    extractAudio: true,
+    cookies: cookiesPath,
+    audioFormat: 'opus',
+  })
 
-// importAudio()
+  if (log) console.log(output)
+}

@@ -1,5 +1,7 @@
-import { audios } from '@/util/importAudio'
 import { AudioCard } from '../../components/audioCard'
+import { getCachedAudio } from '../api/audio/getCachedAudio'
+
+const audios = await getCachedAudio()
 
 export default function Resources() {
   const years = Array.from(

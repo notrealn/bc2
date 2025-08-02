@@ -1,6 +1,8 @@
 import { AudioCard } from '@/components/audioCard'
 import { Layout } from '../resourcesLayout'
-import { audios } from '@/util/importAudio'
+import { getCachedAudio } from '@/app/api/audio/getCachedAudio'
+
+const audios = await getCachedAudio()
 
 export default function Meetings() {
   return (
