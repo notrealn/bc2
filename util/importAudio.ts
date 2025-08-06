@@ -2,6 +2,7 @@ import { Audio } from '@/app/api/audio/getCachedAudio'
 import fs from 'fs/promises'
 import path from 'path'
 import { create, Payload } from 'youtube-dl-exec'
+import { audioLinks } from './audioLinks'
 
 const ytdl = create(
   path.resolve('.', 'node_modules/youtube-dl-exec/bin/yt-dlp')
@@ -9,13 +10,6 @@ const ytdl = create(
 const audioPath = path.resolve('.', 'public/audio')
 const jsonPath = path.resolve('.', 'public/audio/audio.json')
 const cookiesPath = path.resolve('.', 'cookies.txt')
-const audioLinks = {
-  stories: [
-    // 'https://www.youtube.com/playlist?list=PL5NWTqwwolFpAurCIFfpj2oDuEYPeW1vH', // short
-    'https://youtube.com/playlist?list=PL5NWTqwwolFq1gtyqgnFtskxwFrDiP6yW',
-  ],
-  seminars: ['https://youtu.be/JimW9Yg4gsc'],
-}
 
 let audios: { [id: string]: Audio[] } = {}
 

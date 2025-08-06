@@ -49,7 +49,7 @@ export default function Home() {
       </div>
       <LinkContainer>
         <CircleLink text="关怀疗愈" svgPath="/home/heart2.svg" href="todo" />
-        <CircleLink text="区域小组" svgPath="/home/map.svg" href="todo" />
+        <CircleLink text="区域小组" svgPath="/home/map.svg" href="/regions" />
         <CircleLink text="饮食健康" svgPath="/home/fruits.svg" href="todo" />
         <CircleLink text="运动康复" svgPath="/home/dumbell.svg" href="todo" />
       </LinkContainer>
@@ -85,7 +85,7 @@ export default function Home() {
             required
           />
         </Form>
-        <div className="m-auto text-center">
+        <div className="m-auto text-center text-xl">
           每周四（中国星期五）的时间，我们都有网络会议，分享经验，科普信息，姐妹聊天。请联系我们获取ZOOM信息
         </div>
         <div className="flex flex-col gap-2">
