@@ -3,14 +3,14 @@
 import { mail } from '@/util/mail'
 import Form from 'next/form'
 import Image from 'next/image'
-import { ReactNode, useOptimistic } from 'react'
+import { ReactNode, startTransition, useActionState } from 'react'
 
 export default function Home() {
-  const [sending, setSending] = useOptimistic(false, () => true)
+  const [sent, sendAction, isPending] = useActionState(() => true, false)
 
   return (
     <main>
-      <div className="bg-gradient-to-r from-black to-red-700 text-white text-center flex justify-evenly p-4 object-contain flex-wrap  gap-y-4">
+      <div className="bg-linear-to-r from-black to-red-700 text-white text-center flex justify-evenly p-4 object-contain flex-wrap  gap-y-4">
         <div className="flex flex-col justify-evenly text-xl gap-2">
           <div className="flex flex-row flex-wrap justify-center gap-x-2">
             <h1 className="text-4xl font-bold">我们的宗旨</h1>
@@ -20,7 +20,7 @@ export default function Home() {
             我们是一群乳腺癌患者成立的乳腺癌关怀机构，希望我们能在爱里，彼此陪伴，爱来癌去，一路同行！
           </p>
           <div className="relative">
-            <p className="text-pink-400">
+            <p className="text-pink-400 text-shadow-[0_0_4px_white]">
               在每一个你需要的时刻，希望我们都能陪你度过。
             </p>
             <Image
@@ -60,28 +60,33 @@ export default function Home() {
         <RectLink text="病友探访" svgPath="/home/health.svg" href="todo" />
         <RectLink text="特殊活动" svgPath="/home/people.svg" href="todo" />
       </LinkContainer>
-      <div className="bg-gradient-to-r from-black to-red-700 text-white text-center text-xl p-2">
+      <div className="bg-linear-to-r from-black to-red-700 text-white text-center text-xl p-2">
         当你孤单的时候，请相信，我们也正在找你，希望给你一个温暖的拥抱......
       </div>
       <div className="flex flex-row justify-evenly gap-4 m-6 flex-wrap lg:flex-nowrap">
         <Form
           className="flex gap-2 grow-2"
           action={async (formdata) => {
-            setSending(true)
             console.log('sending', Object.fromEntries(formdata.entries()))
+            startTransition(() => {
+              sendAction()
+            })
             await mail(formdata)
           }}
         >
           <input
-            className="col-span-2 border bg-pink-400 m-auto p-1 rounded-md"
+            className="col-span-2 border bg-pink-300 m-auto p-1 rounded-md"
             type="submit"
-            value={sending ? '...' : '给我们留言'}
+            value={
+              isPending ? '...' : sent ? '信息已经发送，谢谢！' : '给我们留言'
+            }
           />
           <input
-            className="border rounded-md p-1 text-black min-h-16 w-72"
+            className="border rounded-md p-1 text-black min-h-16 w-72 bg-amber-100"
             type="text"
             name="feedback"
             id="feedback"
+            placeholder="给我们留言"
             required
           />
         </Form>

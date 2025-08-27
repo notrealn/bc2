@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-black to-red-700 text-white text-center p-4 flex flex-row justify-around relative">
+    <footer className="bg-linear-to-r from-black to-red-700 text-white text-center p-4 flex flex-row justify-around relative">
       <div className="flex flex-col text-pink-200 justify-self-center">
         <div className="text-xl">主爱粉丝团</div>
         <div>GIG FOREVER</div>

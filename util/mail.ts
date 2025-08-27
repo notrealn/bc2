@@ -16,7 +16,7 @@ export async function mail(formdata: FormData) {
   const info = await transporter.sendMail({
     // from: process.env.EMAIL_USERNAME,
     to: process.env.EMAIL_TARGET,
-    subject: `message from ${formdata.get('如何称呼你?')}`,
+    subject: `message from ${formdata.get('如何称呼你?') ?? 'anonymous'}`,
     // text: 'form contents:',
     html: `<table><tr><th>field</th><th>value</th></tr>${[...formdata.entries()]
       .filter(([_, v]) => v !== '')

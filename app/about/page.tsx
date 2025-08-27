@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function ToDo() {
   return (
-    <main className="bg-gradient-to-r from-black to-red-700 text-white text-center p-4 h-full flex flex-col md:flex-row w-full">
+    <main className="bg-linear-to-r from-black to-red-700 text-white text-center p-4 h-full flex flex-col md:flex-row w-full">
       <div className="flex-none p-4 text-lg">
         <div>我们的故事</div>
         <div className="underline">我们的活动</div>

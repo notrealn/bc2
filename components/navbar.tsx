@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 export function NavBar() {
   return (
-    <nav className="bg-gradient-to-r from-black to-red-700 pl-4 pr-4">
+    <nav className="bg-linear-to-r from-black to-red-700 pl-4 pr-4">
       <div className="flex flex-row justify-between items-center flex-wrap p-2 gap-3">
         <div className="flex flex-row flex-initial">
           <Image
@@ -47,7 +47,7 @@ export function NavBar() {
           </svg>
         </label>
 
-        <div className="hidden lg:flex peer-has-[:checked]:flex flex-row grow items-center peer-has-[:checked]:flex-col peer-has-[:checked]:items-start peer-has-[:checked]:w-full gap-3">
+        <div className="hidden lg:flex peer-has-checked:flex flex-row grow items-center peer-has-checked:flex-col peer-has-checked:items-start peer-has-checked:w-full gap-3">
           <PageLink text="首页" href="/" />
           <PageLink text="区域活动" href="/regions" />
           <PageLink text="病友故事" href="/stories" />

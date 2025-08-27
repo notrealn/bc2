@@ -2,7 +2,7 @@
 
 import { mail } from '@/util/mail'
 import Form from 'next/form'
-import { useActionState } from 'react'
+import { startTransition, useActionState } from 'react'
 import Image from 'next/image'
 
 export default function About() {
@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <main className="flex flex-col text-pink-400">
-      <div className="bg-gradient-to-r from-black to-red-700 flex flex-col items-center p-2">
+      <div className="bg-linear-to-r from-black to-red-700 flex flex-col items-center p-2">
         <h1 className="text-2xl text-white mb-2 text-center">
           如果你希望我们支持你、聆听你、陪你一起走过治疗之路， 请联系我们
         </h1>
@@ -30,11 +30,13 @@ export default function About() {
           </div>
         </div>
         <Form
-          className="grid grid-cols-3 items-center max-w-2xl bg-pink-200 text-pink-900 gap-2 p-4 rounded-lg"
+          className="grid grid-cols-3 items-center max-w-2xl bg-pink-100 text-pink-900 gap-2 p-4 rounded-lg"
           action={async (formdata) => {
             console.log('sending', Object.fromEntries(formdata.entries()))
+            startTransition(() => {
+              sendAction()
+            })
             await mail(formdata)
-            sendAction()
           }}
         >
           <div className="col-span-3 text-center">
@@ -50,10 +52,10 @@ export default function About() {
           <TextInput text="希望获得什么支持？" big />
           <TextInput text="想对我们说的话" big />
           <input
-            className="col-span-3 bg-pink-400 m-auto p-1 rounded-md text-black"
+            className="col-span-3 bg-pink-300 m-auto p-1 rounded-md text-black text-xl"
             type="submit"
             disabled={isPending}
-            value={isPending ? '...' : '提 交'}
+            value={isPending ? '...' : '提交'}
           />
         </Form>
       </div>
@@ -76,7 +78,8 @@ function TextInput({ text, big }: { text: string; big?: boolean }) {
       </label>
       <input
         className={
-          `border rounded-md text-black col-span-2` + (big ? ' min-h-32' : '')
+          `border border-gray-600 rounded-md text-black col-span-2` +
+          (big ? ' min-h-32' : '')
         }
         type="text"
         name={text}
