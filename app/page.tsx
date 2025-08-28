@@ -20,7 +20,7 @@ export default function Home() {
             我们是一群乳腺癌患者成立的乳腺癌关怀机构，希望我们能在爱里，彼此陪伴，爱来癌去，一路同行！
           </p>
           <div className="relative">
-            <p className="text-pink-400 text-shadow-[0_0_4px_white]">
+            <p className="text-pink-400 font-outline text-xl">
               在每一个你需要的时刻，希望我们都能陪你度过。
             </p>
             <Image
@@ -78,7 +78,7 @@ export default function Home() {
             className="col-span-2 border bg-pink-300 m-auto p-1 rounded-md"
             type="submit"
             value={
-              isPending ? '...' : sent ? '信息已经发送，谢谢！' : '给我们留言'
+              isPending ? '...' : sent ? '信息已经发送，谢谢！' : '留言发送'
             }
           />
           <input

@@ -21,6 +21,15 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  .font-outline {
+    text-shadow:
+      -1px -1px 1px #fff,
+      1px -1px 1px #fff,
+      -1px 1px 1px #fff,
+      1px 1px 1px #fff;
+    /* -webkit-text-stroke: 0.5px white; */
+  }
 }
 
 :root {

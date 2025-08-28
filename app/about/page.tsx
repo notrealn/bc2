@@ -1,24 +1,17 @@
+import { SideSticky } from '@/components/sidesticky'
 import Image from 'next/image'
 
-export default function ToDo() {
+export default function About() {
   return (
     <main className="bg-linear-to-r from-black to-red-700 text-white text-center p-4 h-full flex flex-col md:flex-row w-full">
       <div className="flex-none p-4 text-lg">
         <div>我们的故事</div>
         <div className="underline">我们的活动</div>
       </div>
-      <div className="relative size-fit m-auto md:absolute md:top-1/2 md:left-4 md:transform md:-translate-y-1/2">
-        <Image
-          src="/stickyNote.svg"
-          alt="stickynote"
-          width={180}
-          height={180}
-        />
-        <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-black text-center text-xl">
-          请联系我们<br></br>询问加入方式
-          <Image src="/heart.svg" alt="heart" width={40} height={40} />
-        </div>
-      </div>
+      <SideSticky src="/stickyNote.svg">
+        请联系我们<br></br>询问加入方式
+        <Image src="/heart.svg" alt="heart" width={40} height={40} />
+      </SideSticky>
       <div className="flex flex-col items-center max-w-lg m-auto grow w-full">
         <h1 className="border-2 rounded-xl w-32 mb-3">主爱聚会</h1>
         <div className="flex flex-col w-full gap-2">
