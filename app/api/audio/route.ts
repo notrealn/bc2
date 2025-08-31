@@ -3,7 +3,7 @@
 import fs from 'fs/promises'
 import { NextRequest } from 'next/server'
 import path from 'path'
-import { readAudioFile } from '@/util/importAudio'
+import { readAudioFile } from '@/audio/importAudio'
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams

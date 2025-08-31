@@ -1,15 +1,17 @@
 // import { readFile } from 'fs/promises'
 
 export async function register() {
-  console.log(process.env.NEXT_RUNTIME)
+  if (process.env.NEXT_RUNTIME === 'nodejs') {
+    console.log('node! starting downloads.')
 
-  //   if (process.env.NEXT_RUNTIME === 'nodejs') {
-  //     console.log('node!')
-  //   }
+    const { importAudio } = await import('@/audio/importAudio')
 
-  //   if (process.env.NEXT_RUNTIME === 'edge') {
-  //     console.log('edge...')
-  //   }
+    await importAudio()
+  }
+
+  if (process.env.NEXT_RUNTIME === 'edge') {
+    console.log('edge...')
+  }
 }
 // import { create, Payload } from 'youtube-dl-exec'
 
