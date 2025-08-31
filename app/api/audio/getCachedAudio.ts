@@ -27,6 +27,7 @@ export async function readAudioFile() {
 let audio: { [id: string]: Audio[] }
 
 export async function getCachedAudio() {
+  // this code is ASS I HATE CODE
   audio = await readAudioFile()
 
   return audio
