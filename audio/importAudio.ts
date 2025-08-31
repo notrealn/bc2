@@ -76,7 +76,7 @@ export async function importAudio() {
 }
 
 export async function readAudioFile() {
-  console.log('asdflkdjasfklajsdlfkj')
+  console.log('reading file')
   return JSON.parse(await fs.readFile(jsonPath, { encoding: 'utf-8' })) as {
     [id: string]: Audio[]
   }
