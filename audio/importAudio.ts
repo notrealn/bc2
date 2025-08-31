@@ -76,10 +76,15 @@ export async function importAudio() {
 }
 
 export async function readAudioFile() {
-  console.log('reading file')
-  return JSON.parse(await fs.readFile(jsonPath, { encoding: 'utf-8' })) as {
-    [id: string]: Audio[]
+  console.log('reading audio file')
+  try {
+    return JSON.parse(await fs.readFile(jsonPath, { encoding: 'utf-8' })) as {
+      [id: string]: Audio[]
+    }
+  } catch (err) {
+    console.log(`err ${err} when reading audio file`)
   }
+  return {}
 }
 
 async function getMetadata(link: string) {
