@@ -27,9 +27,7 @@ export async function readAudioFile() {
 let audio: { [id: string]: Audio[] }
 
 export async function getCachedAudio() {
-  if (!audio || Object.keys(audio).length === 0) {
-    audio = await readAudioFile()
-  }
+  audio = await readAudioFile()
 
   return audio
 }
