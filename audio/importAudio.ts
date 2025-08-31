@@ -68,12 +68,14 @@ export async function importAudio() {
         } catch (err) {
           console.log(`err ${JSON.stringify(err)} when downloading ${link}`)
         }
+        await fs.writeFile(jsonPath, JSON.stringify(audios))
       }
     }
   }
 }
 
 export async function readAudioFile() {
+  console.log('asdflkdjasfklajsdlfkj')
   return JSON.parse(await fs.readFile(jsonPath, { encoding: 'utf-8' })) as {
     [id: string]: Audio[]
   }
