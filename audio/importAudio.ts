@@ -68,6 +68,7 @@ export async function importAudio() {
         } catch (err) {
           console.log(`err ${JSON.stringify(err)} when downloading ${link}`)
         }
+
         await fs.writeFile(jsonPath, JSON.stringify(audios))
       }
     }
