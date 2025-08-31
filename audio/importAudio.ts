@@ -63,13 +63,13 @@ export async function importAudio() {
             // console.log(audios)
             await downloadVideo(link, true)
           }
+
+          fs.writeFile(jsonPath, JSON.stringify(audios))
         } catch (err) {
           console.log(`err ${JSON.stringify(err)} when downloading ${link}`)
         }
       }
     }
-
-    fs.writeFile(jsonPath, JSON.stringify(audios))
   }
 }
 

@@ -25,9 +25,19 @@ export async function readAudioFile() {
 }
 
 let audio: { [id: string]: Audio[] }
+let cacheTimestamp = 0
+
+const cacheLifetime = 300000 // 5 mins
 
 export async function getCachedAudio() {
-  if (!audio || Object.keys(audio).length === 0) audio = await readAudioFile()
+  if (
+    !audio ||
+    Object.keys(audio).length === 0 ||
+    Date.now() - cacheTimestamp < cacheLifetime
+  ) {
+    cacheTimestamp = Date.now()
+    audio = await readAudioFile()
+  }
 
   return audio
 }

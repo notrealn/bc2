@@ -13,7 +13,7 @@ export default function Resources() {
 
   return (
     <main className="bg-linear-to-r from-black to-red-700 size-full">
-      <div className="flex flex-col md:flex-row justify-around max-w-4xl m-auto mt-0 pt-4">
+      <div className="flex flex-col md:flex-row justify-around max-w-4xl m-auto mt-0 pt-4 text-white">
         {audios?.stories?.length == 0 ? null : (
           <div className="flex flex-row justify-center md:justify-start md:flex-col gap-2">
             {years.map((year, i) => (
