@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 export function NavBar() {
   return (
-    <nav className="bg-linear-to-r from-black to-red-700 pl-4 pr-4">
+    <nav className="bg-surface-container text-on-surface-container pl-4 pr-4">
       <div className="flex flex-row justify-between items-center flex-wrap p-2 gap-3">
         <div className="flex flex-row flex-initial">
           <Image
@@ -15,7 +15,7 @@ export function NavBar() {
             width={80}
             height={80}
           />
-          <div className="flex flex-col justify-evenly text-white">
+          <div className="flex flex-col justify-evenly text-primary">
             <div className="text-xl">主爱粉丝团</div>
             <div>GIG FOREVER</div>
           </div>
@@ -49,10 +49,10 @@ export function NavBar() {
 
         <div className="hidden lg:flex peer-has-checked:flex flex-row grow items-center peer-has-checked:flex-col peer-has-checked:items-start peer-has-checked:w-full gap-3">
           <PageLink text="首页" href="/" />
-          <PageLink text="主爱活动" href="/activities" />
+          {/* <PageLink text="主爱活动" href="/activities" />
           <PageLink text="病友故事" href="/stories" />
+          <PageLink text="我们是谁" href="/about" /> */}
           <PageLink text="社区资源" href="/resources" />
-          <PageLink text="我们是谁" href="/about" />
           <PageLink text="联系我们" href="/contact-us" />
           <SupportUs />
         </div>
@@ -61,12 +61,16 @@ export function NavBar() {
   )
 }
 
+function DropDown() {
+  return <div></div>
+}
+
 function PageLink({ text, href }: { text: string; href: string }) {
   const path = usePathname()
 
   return (
     <a
-      className={`border-2 rounded-lg w-full max-w-24 text-center text-white border-white ${(href === '/' && path == href) || (href !== '/' && path.startsWith(href)) ? 'bg-white/20' : ''}`}
+      className={`text-xl ${(href === '/' && path == href) || (href !== '/' && path.startsWith(href)) ? 'text-primary' : ''}`}
       href={href}
     >
       {text}
@@ -76,10 +80,10 @@ function PageLink({ text, href }: { text: string; href: string }) {
 
 function SupportUs() {
   return (
-    <div className="flex flex-row items-center rounded-full bg-pink-200 shadow-lg lg:ml-auto">
+    <div className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg lg:ml-auto">
       <div className="text-xl p-3 pr-0">支持我们</div>
       <Image
-        className="border-4 border-pink-200 bg-pink-200 rounded-full p-1 overflow-visible m-1 shadow-xl"
+        className="p-2 overflow-visible m-2"
         src="/support-us.svg"
         alt="support us!"
         width={48}

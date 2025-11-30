@@ -4,9 +4,9 @@ export async function register() {
   if (process.env.NEXT_RUNTIME === 'nodejs') {
     console.log('node! starting downloads.')
 
-    const { importAudio } = await import('@/audio/importAudio')
+    // const { importAudio } = await import('@/audio/importAudio')
 
-    await importAudio()
+    // await importAudio()
   }
 
   if (process.env.NEXT_RUNTIME === 'edge') {

@@ -27,51 +27,51 @@ export async function importAudio() {
   } catch (_) {
     audios = {}
 
-    for (const [id, links] of Object.entries(audioLinks)) {
-      audios[id] = []
+    // for (const [id, links] of Object.entries(audioLinks)) {
+    //   audios[id] = []
 
-      for (const link of links) {
-        try {
-          console.log(`starting ${link}`)
+    //   for (const link of links) {
+    //     try {
+    //       console.log(`starting ${link}`)
 
-          if (link.includes('playlist')) {
-            console.log('is a playlist')
-            const metametadata = await ytdl(link, {
-              skipDownload: true,
-              dumpSingleJson: true,
-            })
+    //       if (link.includes('playlist')) {
+    //         console.log('is a playlist')
+    //         const metametadata = await ytdl(link, {
+    //           skipDownload: true,
+    //           dumpSingleJson: true,
+    //         })
 
-            const entries = (metametadata as any).entries as Payload[]
+    //         const entries = (metametadata as any).entries as Payload[]
 
-            for (const entry of entries) {
-              await downloadVideo(entry.webpage_url)
-              audios[id].push({
-                title: entry.title,
-                date: entry.upload_date,
-                id: entry.id,
-                url: entry.webpage_url,
-              })
-            }
-          } else {
-            const metadata = await getMetadata(link)
-            audios[id].push({
-              title: metadata.title,
-              date: metadata.upload_date,
-              id: metadata.id,
-              url: metadata.webpage_url,
-            })
-            // console.log(audios)
-            await downloadVideo(link, true)
-          }
+    //         for (const entry of entries) {
+    //           await downloadVideo(entry.webpage_url)
+    //           audios[id].push({
+    //             title: entry.title,
+    //             date: entry.upload_date,
+    //             id: entry.id,
+    //             url: entry.webpage_url,
+    //           })
+    //         }
+    //       } else {
+    //         const metadata = await getMetadata(link)
+    //         audios[id].push({
+    //           title: metadata.title,
+    //           date: metadata.upload_date,
+    //           id: metadata.id,
+    //           url: metadata.webpage_url,
+    //         })
+    //         // console.log(audios)
+    //         await downloadVideo(link, true)
+    //       }
 
-          fs.writeFile(jsonPath, JSON.stringify(audios))
-        } catch (err) {
-          console.log(`err ${JSON.stringify(err)} when downloading ${link}`)
-        }
+    //       fs.writeFile(jsonPath, JSON.stringify(audios))
+    //     } catch (err) {
+    //       console.log(`err ${JSON.stringify(err)} when downloading ${link}`)
+    //     }
 
-        await fs.writeFile(jsonPath, JSON.stringify(audios))
-      }
-    }
+    //     await fs.writeFile(jsonPath, JSON.stringify(audios))
+    //   }
+    // }
   }
 }
 

@@ -10,9 +10,9 @@ export default function About() {
   const [sent, sendAction, isPending] = useActionState(() => true, false)
 
   return (
-    <main className="flex flex-col text-pink-400">
-      <div className="bg-linear-to-r from-black to-red-700 flex flex-col items-center p-2">
-        <h1 className="text-2xl text-white mb-2 text-center">
+    <main className="flex flex-col">
+      <div className="bg-surface text-on-surface flex flex-col items-center p-2">
+        <h1 className="text-2xl m-4 text-center">
           如果你希望我们支持你、聆听你、陪你一起走过治疗之路， 请联系我们
         </h1>
         <SideSticky src="/stickyNote.svg">
