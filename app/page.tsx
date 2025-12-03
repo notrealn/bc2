@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="h-full bg-gradient-to-b from-surface from-70% to-surface-container-highest to-100% text-on-surface ">
+    <main className="h-full bg-surface text-on-surface ">
       <div className="text-center flex justify-evenly p-4 object-contain flex-wrap gap-y-4">
         <div className="flex flex-col justify-evenly text-xl gap-2">
           <div className="flex flex-row flex-wrap justify-center gap-x-2">
@@ -39,7 +39,7 @@ export default function Home() {
           height={449}
         />
       </div>
-      <div className="flex flex-row justify-evenly p-4 gap-4">
+      <div className="flex flex-col items-center md:flex-row md:items-stretch justify-evenly p-4 gap-4">
         <Card
           imgsrc="/home/heart2.svg"
           alt="heart"
@@ -72,12 +72,14 @@ export default function Home() {
           href="/todo"
         ></Card>
       </div>
-      <div className="text-center bg-surface p-8">
-        <div className="m-auto max-w-2xl">
-          我們最想傳遞的祝福“爱来癌去”，不是说癌症会凭空消失，而是说：爱能把恐惧慢慢带走,
-          爱能在治疗中带 来力量,
-          爱能让我们重新找回笑声。癌症的确可怕。但当一个人不再孤单时，它就没有那么可怕了。
-          在这里，我们听你、陪你、理解你, 因为我们走过一样的路。
+      <div className="bg-surface-container pt-4 pb-4 mt-4">
+        <div className="text-center p-4 [border-image:url(/home/vines.png)_45_0_/_20px_0px_repeat] border-0 border-t-[20px] border-b-[20px]">
+          <div className="m-auto max-w-2xl">
+            我们最想传递的祝福“爱来癌去”，不是说癌症会凭空消失，而是说：爱能把恐惧慢慢带走,
+            爱能在治疗中 带来力量,
+            爱能让我们重新找回笑声。癌症的确可怕。但当一个人不再孤单时，它就没有那么可怕了。
+            在这里，我们听你、陪你、理解你, 因为我们走过一样的路。
+          </div>
         </div>
       </div>
     </main>
@@ -100,7 +102,7 @@ function Card({
   href: string
 }) {
   return (
-    <div className="flex flex-col items-center max-w-80 w-full p-4 gap-2 bg-surface-container border-2 border-white">
+    <div className="flex flex-col items-center max-w-80 w-full p-4 gap-2 bg-surface-container border-2 border-white shadow-xl">
       <Image
         className="w-16"
         src={imgsrc}
