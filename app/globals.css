@@ -1,11 +1,14 @@
 @import 'tailwindcss';
 
+@custom-variant hover (&:hover);
+
 @theme {
   --color-surface: var(--background);
   --color-on-surface: #333333;
   --color-surface-container: #ebf6e5;
   --color-on-surface-container: #545454;
   --color-surface-container-highest: #c1d4cd;
+  --color-surface-container-lowest: #ffffff;
   --color-primary: #eb6695;
   --color-on-primary: #fff;
   /* --color-background: var(--background);

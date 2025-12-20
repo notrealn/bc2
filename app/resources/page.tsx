@@ -1,6 +1,6 @@
 export default function Resources() {
   return (
-    <main className="bg-surface text-on-surface m-4">
+    <main className="bg-surface text-on-surface mt-6 p-2">
       <div className="flex flex-col gap-4 max-w-2xl ml-auto mr-auto">
         <h1 className="text-xl font-bold">美國乳癌資源網站</h1>
         <Link

@@ -2,58 +2,69 @@
 
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 export function NavBar() {
-  return (
-    <nav className="bg-surface-container text-on-surface-container pl-4 pr-4">
-      <div className="flex flex-row justify-between items-center flex-wrap p-2 gap-3">
-        <div className="flex flex-row flex-initial">
-          <Image
-            className=""
-            src="/main-icon.png"
-            alt="website icon"
-            width={80}
-            height={80}
-          />
-          <div className="flex flex-col justify-evenly text-primary">
-            <div className="text-xl">主爱粉丝团</div>
-            <div>GIG FOREVER</div>
-          </div>
-        </div>
-        <label className="peer lg:hidden size-8">
-          <input className="peer hidden" type="checkbox" />
-          {/* <div className="bg-black size-full"></div> */}
-          <svg
-            className="peer-checked:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            {/*<!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->*/}
-            <path
-              fill="#000"
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-            />
-          </svg>
-          <svg
-            className="hidden peer-checked:block"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 384 512"
-          >
-            {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
-            <path
-              fill="#000"
-              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-            />
-          </svg>
-        </label>
+  const [isOpen, setOpen] = useState(false)
 
-        <div className="hidden lg:flex peer-has-checked:flex flex-row grow items-center peer-has-checked:flex-col peer-has-checked:items-start peer-has-checked:w-full gap-3">
+  return (
+    <nav className="p-2 pl-4 pr-4 bg-surface-container text-on-surface-container flex flex-row items-center lg:items-center flex-wrap gap-4 drop-shadow">
+      <div className="flex">
+        <Image
+          className=""
+          src="/main-icon.png"
+          alt="website icon"
+          width={80}
+          height={80}
+        />
+        <div className="flex flex-col justify-evenly text-primary">
+          <div className="text-xl">主爱粉丝团</div>
+          <div>GIG FOREVER</div>
+        </div>
+      </div>
+
+      <label className="peer ml-auto lg:hidden size-8">
+        <input className="peer hidden" type="checkbox" />
+        <svg
+          className="peer-checked:hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          {/*<!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->*/}
+          <path
+            fill="#000"
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+        <svg
+          className="hidden peer-checked:block"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        >
+          {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
+          <path
+            fill="#000"
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          />
+        </svg>
+      </label>
+
+      <div className="grow hidden peer-has-checked:flex peer-has-checked:flex-col peer-has-checked:w-full lg:flex">
+        <div className="flex flex-col lg:flex-row lg:items-center p-4 gap-4">
           <PageLink text="首页" href="/" />
-          {/* <PageLink text="主爱活动" href="/activities" />
-          <PageLink text="病友故事" href="/stories" />
-          <PageLink text="我们是谁" href="/about" /> */}
+          <DropDown
+            label="认识我们"
+            options={[
+              { text: '给第一次來的你', href: '/about/first' },
+              { text: '使命和团队', href: '/todo' },
+              { text: '緣起和历史', href: '/todo' },
+            ]}
+          />
           <PageLink text="社区资源" href="/resources" />
           <PageLink text="联系我们" href="/contact-us" />
+        </div>
+
+        <div className="flex p-2 gap-4 lg:p-0 lg:ml-auto">
           <SupportUs />
         </div>
       </div>
@@ -61,8 +72,45 @@ export function NavBar() {
   )
 }
 
-function DropDown() {
-  return <div></div>
+function DropDown({
+  label,
+  options,
+}: {
+  label: string
+  options: { text: string; href: string }[]
+}) {
+  return (
+    <div className="group relative cursor-pointer py-1">
+      <div className="text-xl flex items-center">
+        {label}
+        <svg
+          className="w-5 h-5 ms-1.5 -me-0.5 stroke-primary"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="#eb6695"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="4"
+            d="m19 9-7 7-7-7"
+          />
+        </svg>
+      </div>
+
+      <div className="hidden absolute group-hover:flex flex-col bg-surface-container-lowest text-on-surface-container text-center rounded-xl w-max p-2 gap-2 mt-1">
+        {options.map(({ text, href }, i) => (
+          <a href={href} key={i}>
+            {text}
+          </a>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 function PageLink({ text, href }: { text: string; href: string }) {
@@ -80,7 +128,7 @@ function PageLink({ text, href }: { text: string; href: string }) {
 
 function SupportUs() {
   return (
-    <div className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg lg:ml-auto">
+    <div className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg w-fit">
       <div className="text-xl p-3 pr-0">支持我们</div>
       <Image
         className="p-2 overflow-visible m-2"

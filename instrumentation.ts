@@ -2,7 +2,7 @@
 
 export async function register() {
   if (process.env.NEXT_RUNTIME === 'nodejs') {
-    console.log('node! starting downloads.')
+    console.log('node!')
 
     // const { importAudio } = await import('@/audio/importAudio')
 

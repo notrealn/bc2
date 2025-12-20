@@ -32,7 +32,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-          className="min-w-0 max-w-sm w-full h-auto p-4 bg-white shadow-2xl"
+          className="min-w-0 max-w-sm w-full h-auto p-4 bg-white shadow-lg"
           src="/home/hands-together.png"
           alt="hands-together"
           width={494}
@@ -72,7 +72,7 @@ export default function Home() {
           href="/todo"
         ></Card>
       </div>
-      <div className="bg-surface-container pt-4 pb-4 mt-4">
+      <div className="bg-surface-container pt-4 pb-4 drop-shadow-md">
         <div className="text-center p-4 [border-image:url(/home/vines.png)_45_0_/_20px_0px_repeat] border-0 border-t-[20px] border-b-[20px]">
           <div className="m-auto max-w-2xl">
             我们最想传递的祝福“爱来癌去”，不是说癌症会凭空消失，而是说：爱能把恐惧慢慢带走,
@@ -102,7 +102,7 @@ function Card({
   href: string
 }) {
   return (
-    <div className="flex flex-col items-center max-w-80 w-full p-4 gap-2 bg-surface-container border-2 border-white shadow-xl">
+    <div className="flex flex-col items-center max-w-80 w-full p-4 gap-2 bg-surface-container border-2 border-white shadow-md">
       <Image
         className="w-16"
         src={imgsrc}
