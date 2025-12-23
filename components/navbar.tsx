@@ -2,13 +2,10 @@
 
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
 
 export function NavBar() {
-  const [isOpen, setOpen] = useState(false)
-
   return (
-    <nav className="p-2 pl-4 pr-4 bg-surface-container text-on-surface-container flex flex-row items-center lg:items-center flex-wrap gap-4 drop-shadow">
+    <nav className="p-2 pl-4 pr-4 bg-surface-container text-on-surface-container flex flex-row items-center lg:items-center flex-wrap gap-4 drop-shadow z-10">
       <div className="flex">
         <Image
           className=""
@@ -56,8 +53,8 @@ export function NavBar() {
             label="认识我们"
             options={[
               { text: '给第一次來的你', href: '/about/first' },
-              { text: '使命和团队', href: '/todo' },
-              { text: '緣起和历史', href: '/todo' },
+              { text: '使命和团队', href: '/about/mission' },
+              { text: '緣起和历史', href: '/about/history' },
             ]}
           />
           <PageLink text="社区资源" href="/resources" />
@@ -80,7 +77,7 @@ function DropDown({
   options: { text: string; href: string }[]
 }) {
   return (
-    <div className="group relative cursor-pointer py-1">
+    <div className="group relative cursor-pointer py-1 z-10">
       <div className="text-xl flex items-center">
         {label}
         <svg

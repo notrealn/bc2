@@ -1,9 +1,10 @@
 import Image from 'next/image'
 
-export default function First() {
+export default function Page() {
   return (
     <div className="flex flex-col text-center gap-2">
-      <h1 className="text-2xl text-primary p-8 pb-2">
+      <h1 className="text-2xl text-primary p-8 pb-2 flex m-auto gap-2">
+        <Image src="/about/flower.webp" alt="flower" width={32} height={33} />
         关于主爱粉丝团｜给第一次来到这里的你
       </h1>
       <div>
@@ -41,7 +42,17 @@ export default function First() {
         <br />
         因为我们走过一样的路。
       </div>
-      <h1 className="text-2xl text-primary p-4">来自小爱的一句话</h1>
+      <Image
+        src="/about/heart-border.png"
+        className="max-w-xl m-auto p-4"
+        alt="hearts"
+        width={2400}
+        height={77}
+      />
+      <h1 className="text-2xl text-primary pb-2 flex m-auto gap-2">
+        <Image src="/about/letter.webp" alt="flower" width={45} height={30} />
+        来自小爱的一句话
+      </h1>
       <div>乳腺癌曾经是我生命里最大的恐惧，但如今却成为一个深深的祝福。</div>
       <div>
         它让我知道生命是有限的，也让我重新学习如何珍惜、如何去爱、如何去活。
@@ -57,6 +68,7 @@ export default function First() {
         <br />
         你不孤单。
       </div>
+      <a href="/"></a>
     </div>
   )
 }
