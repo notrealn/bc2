@@ -47,14 +47,25 @@ export function NavBar() {
       </label>
 
       <div className="grow hidden peer-has-checked:flex peer-has-checked:flex-col peer-has-checked:w-full lg:flex">
-        <div className="flex flex-col lg:flex-row lg:items-center p-4 gap-4">
+        <div className="flex flex-col lg:flex-row lg:items-center p-4 gap-4 mr-auto">
           <PageLink text="首页" href="/" />
           <DropDown
             label="认识我们"
+            href="/about"
             options={[
               { text: '给第一次來的你', href: '/about/first' },
               { text: '使命和团队', href: '/about/mission' },
               { text: '緣起和历史', href: '/about/history' },
+            ]}
+          />
+          <DropDown
+            label="癌友服务"
+            href="/services"
+            options={[
+              { text: '癌友互助微信群', href: '/services/wechat' },
+              { text: '线上癌友会', href: '/services/online' },
+              { text: '实体癌友会', href: '/services/in-person' },
+              { text: '医疗心理讲座', href: '/todo' },
             ]}
           />
           <PageLink text="社区资源" href="/resources" />
@@ -71,15 +82,25 @@ export function NavBar() {
 
 function DropDown({
   label,
+  href,
   options,
 }: {
   label: string
+  href: string
   options: { text: string; href: string }[]
 }) {
+  const path = usePathname()
+
   return (
-    <div className="group relative cursor-pointer py-1 z-10">
+    <div className="group relative cursor-pointer py-1">
       <div className="text-xl flex items-center">
-        {label}
+        <div
+          className={
+            href !== '/' && path.startsWith(href) ? 'text-primary' : ''
+          }
+        >
+          {label}
+        </div>
         <svg
           className="w-5 h-5 ms-1.5 -me-0.5 stroke-primary"
           aria-hidden="true"
@@ -99,7 +120,7 @@ function DropDown({
         </svg>
       </div>
 
-      <div className="hidden absolute group-hover:flex flex-col bg-surface-container-lowest text-on-surface-container text-center rounded-xl w-max p-2 gap-2 mt-1">
+      <div className="z-10 hidden absolute group-hover:flex flex-col bg-surface-container-lowest text-on-surface-container text-center rounded-xl w-max p-2 gap-2 mt-1">
         {options.map(({ text, href }, i) => (
           <a href={href} key={i}>
             {text}
