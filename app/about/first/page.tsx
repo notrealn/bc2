@@ -1,8 +1,9 @@
+import { JoinButton } from '@/components/joinButton'
 import Image from 'next/image'
 
 export default function Page() {
   return (
-    <div className="flex flex-col text-center gap-2">
+    <div className="flex flex-col text-center items-center gap-2">
       <h1 className="text-2xl text-primary p-8 pb-2 flex m-auto gap-2">
         <Image src="/about/flower.webp" alt="flower" width={32} height={33} />
         关于主爱粉丝团｜给第一次来到这里的你
@@ -68,7 +69,7 @@ export default function Page() {
         <br />
         你不孤单。
       </div>
-      <a href="/"></a>
+      <JoinButton />
     </div>
   )
 }

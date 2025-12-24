@@ -65,7 +65,7 @@ export function NavBar() {
               { text: '癌友互助微信群', href: '/services/wechat' },
               { text: '线上癌友会', href: '/services/online' },
               { text: '实体癌友会', href: '/services/in-person' },
-              { text: '医疗心理讲座', href: '/todo' },
+              { text: '医疗心理讲座', href: '/services/lectures' },
             ]}
           />
           <PageLink text="社区资源" href="/resources" />
@@ -146,7 +146,10 @@ function PageLink({ text, href }: { text: string; href: string }) {
 
 function SupportUs() {
   return (
-    <div className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg w-fit">
+    <a
+      href="https://www.cchcla.org/donation/gigforever/"
+      className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg w-fit"
+    >
       <div className="text-xl p-3 pr-0">支持我们</div>
       <Image
         className="p-2 overflow-visible m-2"
@@ -155,6 +158,6 @@ function SupportUs() {
         width={48}
         height={48}
       />
-    </div>
+    </a>
   )
 }
