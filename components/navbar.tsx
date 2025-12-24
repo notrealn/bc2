@@ -46,7 +46,7 @@ export function NavBar() {
         </svg>
       </label>
 
-      <div className="grow hidden peer-has-checked:flex peer-has-checked:flex-col peer-has-checked:w-full lg:flex">
+      <div className="grow hidden peer-has-checked:flex peer-has-checked:flex-col peer-has-checked:w-full lg:flex lg:!flex-row lg:!w-fit">
         <div className="flex flex-col lg:flex-row lg:items-center p-4 gap-4 mr-auto">
           <PageLink text="首页" href="/" />
           <DropDown
@@ -55,7 +55,7 @@ export function NavBar() {
             options={[
               { text: '给第一次來的你', href: '/about/first' },
               { text: '使命和团队', href: '/about/mission' },
-              { text: '緣起和历史', href: '/about/history' },
+              { text: '缘起和历史', href: '/about/history' },
             ]}
           />
           <DropDown
