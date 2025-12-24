@@ -33,9 +33,9 @@ export default function Resources() {
 function Link({ label, href }: { label: string; href: string }) {
   return (
     <div className="flex flex-row flex-wrap horizon">
-      <div className="mr-4">{label}</div>
+      {/* <div className="mr-4">{label}</div> */}
       <a className="underline text-blue-400" href={href}>
-        {href}
+        {label}
       </a>
     </div>
   )

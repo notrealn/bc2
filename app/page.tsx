@@ -44,17 +44,17 @@ export default function Home() {
           imgsrc="/home/heart2.svg"
           alt="heart"
           title="你不孤单"
-          content="当你孤单的时候，请相 信，我们也正在找你，希 望给你一个温暖的拥抱"
+          content="当你孤单的时候，请相信，我们也正在找你，希望给你一个温暖的拥抱"
           buttonText="加入我们"
-          href="/todo"
+          href="/contact-us"
         ></Card>
         <Card
           imgsrc="/home/eye.png"
           alt="awareness"
-          title="你不孤单"
-          content="当你孤单的时候，请相 信，我们也正在找你，希 望给你一个温暖的拥抱"
+          title="癌友见证"
+          content="听听乳癌病友如何从主爱粉丝团得到帮助，重拾健康，活出精彩人生"
           buttonText="了解更多"
-          href="/todo"
+          href="/services/lectures"
         ></Card>
         <Card
           imgsrc="/home/social.svg"
@@ -69,7 +69,7 @@ export default function Home() {
             </ul>
           }
           buttonText="了解更多"
-          href="/todo"
+          href="/services/wechat"
         ></Card>
       </div>
       <div className="bg-surface-container pt-4 pb-4 drop-shadow-md">

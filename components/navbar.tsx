@@ -21,7 +21,7 @@ export function NavBar() {
       </div>
 
       <label className="peer ml-auto lg:hidden size-8">
-        <input className="peer hidden" type="checkbox" />
+        <input className="peer hidden" type="checkbox" defaultChecked={true} />
         <svg
           className="peer-checked:hidden"
           xmlns="http://www.w3.org/2000/svg"
