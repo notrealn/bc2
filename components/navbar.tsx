@@ -68,6 +68,14 @@ export function NavBar() {
               { text: '医疗心理讲座', href: '/services/lectures' },
             ]}
           />
+          <DropDown
+            label="癌友园地"
+            href="/patients"
+            options={[
+              { text: '癌友互助微信群', href: '/patients/testimonials' },
+              { text: '线上癌友会', href: '/patients/creations' },
+            ]}
+          />
           <PageLink text="社区资源" href="/resources" />
           <PageLink text="联系我们" href="/contact-us" />
         </div>
