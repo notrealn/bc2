@@ -18,7 +18,7 @@ export function SquareImage({
         (className ?? '')
       }
     >
-      <Image className="p-4" src={src} alt={alt} fill={true} />
+      <Image className="p-4 object-cover" src={src} alt={alt} fill={true} />
     </div>
   )
 }
