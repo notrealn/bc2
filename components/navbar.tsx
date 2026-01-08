@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 export function NavBar() {
@@ -130,9 +131,9 @@ function DropDown({
 
       <div className="z-10 hidden absolute group-hover:flex flex-col bg-surface-container-lowest text-on-surface-container text-center rounded-xl w-max p-2 gap-2 mt-1">
         {options.map(({ text, href }, i) => (
-          <a href={href} key={i}>
+          <Link href={href} key={i}>
             {text}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
@@ -143,18 +144,18 @@ function PageLink({ text, href }: { text: string; href: string }) {
   const path = usePathname()
 
   return (
-    <a
+    <Link
       className={`text-xl ${(href === '/' && path == href) || (href !== '/' && path.startsWith(href)) ? 'text-primary' : ''}`}
       href={href}
     >
       {text}
-    </a>
+    </Link>
   )
 }
 
 function SupportUs() {
   return (
-    <a
+    <Link
       href="https://www.cchcla.org/donation/gigforever/"
       className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg w-fit"
     >
@@ -166,6 +167,6 @@ function SupportUs() {
         width={48}
         height={48}
       />
-    </a>
+    </Link>
   )
 }

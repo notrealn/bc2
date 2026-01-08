@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -56,9 +57,9 @@ function TCard({
       <div className="flex flex-col gap-2">
         <h1 className="text-primary font-semibold">{title}</h1>
         <div className="font-semibold">{body}</div>
-        <a href={href} className="underline">
+        <Link href={href} className="underline">
           阅读全文
-        </a>
+        </Link>
       </div>
     </div>
   )

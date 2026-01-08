@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "docker build -t bc2 .",
-    "start": "docker run -p 8080:8080 bc2",
+    "build": "pnpm next-build",
+    "start": "PORT=8080 pnpm next-standalone",
+    "docker-build": "docker build -t bc2 .",
+    "docker-start": "docker run -p 8080:8080 bc2",
     "next-build": "next build",
     "next-start": "next start",
     "next-standalone": "node .next/standalone/server.js",
