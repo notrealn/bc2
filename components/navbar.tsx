@@ -73,8 +73,8 @@ export function NavBar() {
             label="癌友园地"
             href="/patients"
             options={[
-              { text: '癌友互助微信群', href: '/patients/testimonials' },
-              { text: '线上癌友会', href: '/patients/creations' },
+              { text: '癌友见证', href: '/patients/testimonials' },
+              { text: '精彩人生', href: '/patients/creations' },
             ]}
           />
           <PageLink text="社区资源" href="/resources" />

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -54,7 +55,7 @@ export default function Home() {
           title="癌友见证"
           content="听听乳癌病友如何从主爱粉丝团得到帮助，重拾健康，活出精彩人生"
           buttonText="了解更多"
-          href="/services/lectures"
+          href="/patients/creations"
         ></Card>
         <Card
           imgsrc="/home/social.svg"
@@ -62,10 +63,38 @@ export default function Home() {
           title="我们的服务"
           content={
             <ul className="list-disc">
-              <li>癌友互助微信群</li>
-              <li>每周线上癌友会</li>
-              <li>实体癌友会</li>
-              <li>医疗、心理讲座</li>
+              <li>
+                <Link
+                  href="/services/wechat"
+                  className="text-blue-400 underline"
+                >
+                  癌友互助微信群
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/online"
+                  className="text-blue-400 underline"
+                >
+                  每周线上癌友会
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/in-person"
+                  className="text-blue-400 underline"
+                >
+                  实体癌友会
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/lectures"
+                  className="text-blue-400 underline"
+                >
+                  医疗、心理讲座
+                </Link>
+              </li>
             </ul>
           }
           buttonText="了解更多"
