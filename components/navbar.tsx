@@ -73,11 +73,11 @@ export function NavBar() {
             label="癌友园地"
             href="/patients"
             options={[
-              { text: '癌友见证', href: '/patients/testimonials' },
+              { text: '癌友见证', href: '/patients/testimonies' },
               { text: '精彩人生', href: '/patients/creations' },
             ]}
           />
-          <PageLink text="社区资源" href="/resources" />
+          <PageLink text="乳癌资源" href="/resources" />
           <PageLink text="联系我们" href="/contact-us" />
         </div>
 

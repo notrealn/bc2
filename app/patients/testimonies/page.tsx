@@ -50,7 +50,7 @@ export default function Page() {
 }
 function NoteCard({ body, footer }: { body: string; footer: string }) {
   return (
-    <div className="bg-surface-container-lowest p-4 pl-8 pt-7 [background-image:_linear-gradient(90deg,_transparent_19px,_#abced4_19px,_#abced4_21px,_transparent_21px),_linear-gradient(#eee_.1em,_transparent_.1em)] [background-size:_100%_1.5em]">
+    <div className="bg-surface-container-lowest p-4 pl-8 pt-[1.66rem] [background-image:_linear-gradient(90deg,_transparent_19px,_#abced4_19px,_#abced4_21px,_transparent_21px),_linear-gradient(#eee_.1em,_transparent_.1em)] [background-size:_100%_1.5em]">
       {body}
       <br />
       {footer}

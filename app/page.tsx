@@ -1,10 +1,11 @@
+import { JoinButton } from '@/components/joinButton'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <main className="h-full bg-surface text-on-surface ">
-      <div className="text-center flex justify-evenly p-4 object-contain flex-wrap gap-y-4">
+      <div className="text-center flex justify-evenly p-4 object-contain flex-wrap gap-y-15 gap-x-6">
         <div className="flex flex-col justify-evenly text-xl gap-2">
           <div className="flex flex-row flex-wrap justify-center gap-x-2">
             <h1 className="text-4xl font-bold">我们的宗旨 Our mission:</h1>
@@ -13,7 +14,7 @@ export default function Home() {
             我们是一群乳腺癌患者成立的乳腺癌关怀机构，希望我们能在爱里，彼此陪伴，爱来癌去，一路同行！
           </p>
           <div className="relative">
-            <p className="text-xl mr-5 ml-5">
+            <p className="text-xl mx-8">
               在每一个你需要的时刻，希望 我们都能陪你度过。
             </p>
             <Image
@@ -30,6 +31,9 @@ export default function Home() {
               width={100 / 2}
               height={168 / 2}
             />
+            <div className="absolute -bottom-10 right-20">
+              <JoinButton />
+            </div>
           </div>
         </div>
         <Image
@@ -55,7 +59,7 @@ export default function Home() {
           title="癌友见证"
           content="听听乳癌病友如何从主爱粉丝团得到帮助，重拾健康，活出精彩人生"
           buttonText="了解更多"
-          href="/patients/creations"
+          href="/patients/testimonies"
         ></Card>
         <Card
           imgsrc="/home/social.svg"

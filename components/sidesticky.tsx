@@ -10,7 +10,7 @@ export function SideSticky({
   size?: number
 }) {
   return (
-    <div className="relative size-fit m-auto md:absolute md:top-1/2 md:left-4 md:transform md:-translate-y-1/2">
+    <div className="relative size-fit m-auto lg:absolute lg:top-1/2 lg:left-4 lg:transform lg:-translate-y-1/2">
       <Image
         src={src}
         alt="stickynote"
