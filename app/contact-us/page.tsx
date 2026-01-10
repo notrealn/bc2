@@ -23,7 +23,7 @@ export default function About() {
           @gmail.com
         </SideSticky>
         <Form
-          className="grid grid-cols-3 items-center max-w-2xl gap-2 p-4 text-primary"
+          className="grid grid-cols-3 items-center max-w-2xl gap-2 text-primary"
           action={async (formdata) => {
             console.log('sending', Object.fromEntries(formdata.entries()))
             startTransition(() => {
@@ -32,7 +32,7 @@ export default function About() {
             await mail(formdata)
           }}
         >
-          <div className="col-span-3 text-center">
+          <div className="col-span-3 text-center py-2">
             我们承诺尊重你的隐私，所有内容仅用于与你沟通，不会公开或用于任何商业用途。你可以随时要求我们删除你的信息。
           </div>
           <TextInput text="如何称呼你?" />
@@ -42,7 +42,7 @@ export default function About() {
           <TextInput text="所在國家/城市" />
           <TextInput text="希望获得什么持？" big />
           <input
-            className="col-span-3 bg-primary m-auto p-2 px-4 rounded-4xl text-on-primary text-xl"
+            className="col-span-3 bg-primary m-auto p-2 px-4 my-2 rounded-4xl text-on-primary text-xl"
             type="submit"
             disabled={isPending}
             value={isPending ? '...' : '提交'}

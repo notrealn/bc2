@@ -28,9 +28,38 @@ export default function Page() {
         <br />
         也有营养、饮食、运动等群组，让大家在生活的不同面向都能得到支持。
       </div>
-      <div className="font-bold">我们的特殊之处在于：</div>
       <div className="font-bold">
+        我们的特殊之处在于：
+        <br />
         我们是一个完全由乳腺癌患者彼此关怀的组织。
+      </div>
+      <div>
+        你会很惊讶，许多姐妹在自己的治疗过程中，就已经开始去帮助别人。
+        <br />
+        如果把这些年互相打过的电话、写过的讯息全部连起来，大概会像一条永远不会结束的爱的河流。
+        <br />
+        但即使把所有记录都摊开，也无法真正呈现——我们在爱里彼此牵着、陪着、点亮对方生命的一小束光。
+        <br />
+      </div>
+      <div className="font-bold">
+        我们最简单的一句话，也是我们最想传递的祝福：
+      </div>
+      <div className="font-bold relative">
+        <Image
+          src="/about/hearts.webp"
+          className="hidden md:block absolute scale-256 top-0 -left-72"
+          alt="hearts"
+          width={800}
+          height={174}
+        />
+        “爱来癌去。”
+        <Image
+          src="/about/hearts.webp"
+          className="hidden md:block absolute scale-256 top-0 left-72"
+          alt="hearts"
+          width={800}
+          height={174}
+        />
       </div>
       <div>
         不是说癌症会凭空消失，而是说：
@@ -45,7 +74,7 @@ export default function Page() {
       </div>
       <Image
         src="/about/heart-border.png"
-        className="max-w-xl m-auto p-4"
+        className="w-full max-w-xl m-auto p-4"
         alt="hearts"
         width={2400}
         height={77}
