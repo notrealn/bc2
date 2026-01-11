@@ -1,17 +1,13 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { FooterBody } from './footerBody'
 
 export function Footer() {
   return (
     <footer>
-      {usePathname() != '/' ? (
-        <div className="bg-surface-container min-h-16"></div>
-      ) : (
-        ''
-      )}
+      <div className="bg-surface-container min-h-16 h-fit flex flex-col justify-center">
+        <FooterBody />
+      </div>
       <div className="bg-surface text-on-surface p-4 flex flex-row flex-wrap gap-4 justify-between m-2 relative">
         <div className="mt-auto text-center">
           <div className="flex flex-row flex-initial">
