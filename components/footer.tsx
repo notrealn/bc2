@@ -24,7 +24,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 text-left ml-auto border-surface-container border-l-4 pl-4">
+        <div className="flex flex-col gap-2 text-left ml-auto border-surface-container border-l-4 pl-4 size-fit">
           <h1 className="text-xl font-bold">联系我们</h1>
           {/* <div className="flex flex-row gap-2">
             <div className="bg-pink-500 p-2 rounded-full content">
@@ -44,7 +44,7 @@ export function Footer() {
             <div className="m-auto ml-0">电子邮件：gigforever777@gmail.com</div>
           </div> */}
           <Link className="flex flex-row gap-2" href="/contact-us">
-            <div className="bg-linear-to-b from-cyan-300 to-blue-400 p-2 rounded-full">
+            <div className="bg-linear-to-b from-cyan-300 to-blue-400 p-2 rounded-full size-fit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"

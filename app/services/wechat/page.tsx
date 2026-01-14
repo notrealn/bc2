@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -72,12 +73,15 @@ export default function Page() {
               width={140}
               height={140}
             />
-            <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-black text-center">
+            <Link
+              className="absolute inset-0 flex flex-col justify-center items-center z-10 text-black text-center"
+              href="/contact-us"
+            >
               请联系我们，
               <br />
               询问加入方式
               <Image src="/heart.svg" alt="heart" width={24} height={24} />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
