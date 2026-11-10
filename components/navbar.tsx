@@ -16,7 +16,7 @@ export function NavBar() {
           height={80}
         />
         <div className="flex flex-col justify-evenly text-primary">
-          <div className="text-xl">主愛粉絲團</div>
+          <div className="text-xl">主爱粉丝团</div>
           <div>GIG FOREVER</div>
         </div>
       </div>
@@ -49,36 +49,36 @@ export function NavBar() {
 
       <div className="grow hidden peer-has-checked:flex peer-has-checked:flex-col peer-has-checked:w-full lg:flex lg:!flex-row lg:!w-fit">
         <div className="flex flex-col lg:flex-row lg:items-center p-4 gap-4 mr-auto">
-          <PageLink text="首頁" href="/" />
+          <PageLink text="首页" href="/" />
           <DropDown
-            label="認識我們"
+            label="认识我们"
             href="/about"
             options={[
-              { text: '給第一次來的你', href: '/about/first' },
-              { text: '使命和團隊', href: '/about/mission' },
-              { text: '緣起和歷史', href: '/about/history' },
+              { text: '给第一次來的你', href: '/about/first' },
+              { text: '使命和团队', href: '/about/mission' },
+              { text: '缘起和历史', href: '/about/history' },
             ]}
           />
           <DropDown
-            label="癌友服務"
+            label="癌友服务"
             href="/services"
             options={[
               { text: '癌友互助微信群', href: '/services/wechat' },
-              { text: '線上癌友會', href: '/services/online' },
-              { text: '實體癌友會', href: '/services/in-person' },
-              { text: '醫療心理講座', href: '/services/lectures' },
+              { text: '线上癌友会', href: '/services/online' },
+              { text: '实体癌友会', href: '/services/in-person' },
+              { text: '医疗心理讲座', href: '/services/lectures' },
             ]}
           />
           <DropDown
-            label="癌友園地"
+            label="癌友园地"
             href="/patients"
             options={[
-              { text: '癌友見證', href: '/patients/testimonies' },
+              { text: '癌友见证', href: '/patients/testimonies' },
               { text: '精彩人生', href: '/patients/creations' },
             ]}
           />
-          <PageLink text="乳癌資源" href="/resources" />
-          <PageLink text="聯繫我們" href="/contact-us" />
+          <PageLink text="乳癌资源" href="/resources" />
+          <PageLink text="联系我们" href="/contact-us" />
         </div>
 
         <div className="flex p-2 gap-4 lg:p-0 lg:ml-auto">
@@ -159,7 +159,7 @@ function SupportUs() {
       href="/donate"
       className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg w-fit"
     >
-      <div className="text-xl p-3 pr-0">支持我們</div>
+      <div className="text-xl p-3 pr-0">支持我们</div>
       <Image
         className="p-2 overflow-visible m-2"
         src="/support-us.svg"

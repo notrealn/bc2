@@ -5,7 +5,7 @@ export default function Page() {
     <main className="flex flex-col gap-4 mx-auto my-4 max-w-2xl text-center">
       <div className="font-semibold">
         Lu Lin
-        姐妹在化療期間的創作，治療雖然辛苦，心靈仍可飛出窗外，自由翱翔！喜樂的心乃是良藥！
+        姐妹在化疗期间的创作，治疗虽然辛苦，心灵仍可飞出窗外，自由翱翔！喜乐的心乃是良药！
       </div>
       <div className="flex flex-wrap gap-y-8 justify-center mx-4 -z-10">
         <ArtCard src="/patients/creations/brownbird.jpeg" alt="bird" />

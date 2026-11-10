@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'GIG FOREVER',
-  description: '主愛粉絲團/GIG FOREVER',
+  description: '主爱粉丝团/GIG FOREVER',
 }
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="zh-Hant">
+      <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[max-content_1fr_max-content] min-h-screen`}
         >

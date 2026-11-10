@@ -21,17 +21,17 @@ export default function Resources() {
           href="https://cchclacancer.org/"
         />
         <ResourceLink
-          prelabel="您在尋找並願意參與可能有幫助的乳腺癌臨床驗證嗎？"
-          label="請點擊這個鏈接查詢"
+          prelabel="您在寻找并愿意参与可能有帮助的乳腺癌临床验证吗？"
+          label="请点击这个链接查询"
           href="https://clinicaltrials.gov/search?cond=Breast%20Cancer&aggFilters=status:not%20rec"
         />
         <ResourceLink
-          prelabel="您對自己使用的藥物想了解更多的療效或副反應方面的信息嗎？"
-          label="請點擊這個鏈接"
+          prelabel="您对自己使用的药物想了解更多的疗效或副反应方面的信息吗？"
+          label="请点击这个链接"
           href="https://www.fda.gov/drugs/laws-acts-and-rules/fdas-labeling-resources-human-prescription-drugs"
         />
-        <div>或者，直接在Google 搜索： 藥物名 + FDA labeling</div>
-        <Header>中國乳癌資源網站</Header>
+        <div>或者，直接在Google 搜索： 药物名 + FDA labeling</div>
+        <Header>中国乳癌资源网站</Header>
         <ResourceLink
           label="Angel Care上海粉紅天使癌症病友關愛中心"
           href="http://www.angelcarecn.org/backend/web/index.php"

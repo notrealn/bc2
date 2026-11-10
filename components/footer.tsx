@@ -19,13 +19,13 @@ export function Footer() {
               height={80}
             />
             <div className="flex flex-col justify-evenly text-primary">
-              <div className="text-xl">主愛粉絲團</div>
+              <div className="text-xl">主爱粉丝团</div>
               <div>GIG FOREVER</div>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-2 text-left ml-auto border-surface-container border-l-4 pl-4 size-fit">
-          <h1 className="text-xl font-bold">聯繫我們</h1>
+          <h1 className="text-xl font-bold">联系我们</h1>
           {/* <div className="flex flex-row gap-2">
             <div className="bg-pink-500 p-2 rounded-full content">
               <svg
@@ -41,7 +41,7 @@ export function Footer() {
                 />
               </svg>
             </div>
-            <div className="m-auto ml-0">電子郵件：gigforever777@gmail.com</div>
+            <div className="m-auto ml-0">电子邮件：gigforever777@gmail.com</div>
           </div> */}
           <Link className="flex flex-row gap-2" href="/contact-us">
             <div className="bg-linear-to-b from-cyan-300 to-blue-400 p-2 rounded-full size-fit">
@@ -58,7 +58,7 @@ export function Footer() {
                 />
               </svg>
             </div>
-            <div className="m-auto ml-0">填寫聯繫表，讓我們瞭解你的需要</div>
+            <div className="m-auto ml-0">填写联系表，让我们了解你的需要</div>
           </Link>
           <a
             className="flex flex-row gap-2"
@@ -78,7 +78,7 @@ export function Footer() {
                 />
               </svg>
             </div>
-            <div className="m-auto ml-0">查看我們的油管頻道</div>
+            <div className="m-auto ml-0">查看我们的油管频道</div>
           </a>
         </div>
       </div>

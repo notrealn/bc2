@@ -4,9 +4,9 @@ export default function Page() {
   return (
     <main className="flex flex-col gap-4 mx-auto my-4 max-w-4xl text-center px-2">
       <div className="font-semibold">
-        Tina 康復後的綠手指生活，在擁擠的紐約市，和同是乳癌康復者的媽媽，
+        Tina 康复后的绿手指生活，在拥挤的纽约市，和同是乳癌康复者的妈妈，
         <br />
-        親自用雙手栽重出綠意盎然的天地
+        亲自用双手栽重出绿意盎然的天地
       </div>
       <div className="flex flex-wrap gap-4 justify-center -z-10">
         <div className="grid grid-rows-3 gap-4 w-sm h-[60rem]">

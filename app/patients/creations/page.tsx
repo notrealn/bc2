@@ -15,17 +15,17 @@ export default function Page() {
         />
       </h1>
       <p>
-        這裡展示的是乳癌姐妹在治療過程或康復後的藝術作品、詩詞、生活興趣、文章等等，治療過程雖辛苦仍能找到喜樂的源泉，康復後的與癌共舞讓人生愈加精彩。歡迎主愛粉絲團的乳癌姐妹們踴躍投稿，分享你的精彩人生。若你要投稿，請聯絡你所屬的區域關懷組長或義工。
+        这里展示的是乳癌姐妹在治疗过程或康复后的艺术作品、诗词、生活兴趣、文章等等，治疗过程虽辛苦仍能找到喜乐的源泉，康复后的与癌共舞让人生愈加精彩。欢迎主爱粉丝团的乳癌姐妹们踊跃投稿，分享你的精彩人生。若你要投稿，请联络你所属的区域关怀组长或义工。
       </p>
       <TCard
         title="Lu Lin 病友在治療期間的創作畫作"
-        body="不被拘禁的心，用畫筆陪伴每一次化療"
+        body="不被拘禁的心，用画笔陪伴每一次化疗"
         href="/patients/creations/lulin"
         imgsrc="/patients/creations/bird.jpeg"
       />
       <TCard
-        title="Tina 康復後的綠手指生活"
-        body="和同是乳癌康復者的媽媽，親自用雙手栽重出綠意盎然的天地。"
+        title="Tina 康复后的绿手指生活"
+        body="和同是乳癌康复者的妈妈，亲自用双手栽重出绿意盎然的天地。"
         href="/patients/creations/tina"
         imgsrc="/patients/creations/2melons.jpeg"
       />
@@ -58,7 +58,7 @@ function TCard({
         <h1 className="text-primary font-semibold">{title}</h1>
         <div className="font-semibold">{body}</div>
         <Link href={href} className="underline">
-          閱讀全文
+          阅读全文
         </Link>
       </div>
     </div>
