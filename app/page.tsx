@@ -8,14 +8,14 @@ export default function Home() {
       <div className="text-center flex justify-evenly p-4 object-contain flex-wrap gap-y-15 gap-x-6">
         <div className="flex flex-col justify-evenly text-xl gap-2">
           <div className="flex flex-row flex-wrap justify-center gap-x-2">
-            <h1 className="text-4xl font-bold">我们的宗旨 Our mission:</h1>
+            <h1 className="text-4xl font-bold">我們的宗旨 Our mission:</h1>
           </div>
           <p className="max-w-lg">
-            我们是一群乳腺癌患者成立的乳腺癌关怀机构，希望我们能在爱里，彼此陪伴，爱来癌去，一路同行！
+            我們是一群乳腺癌患者成立的乳腺癌關懷機構，希望我們能在愛裡，彼此陪伴，愛來癌去，一路同行！
           </p>
           <div className="relative">
             <p className="text-xl mx-8">
-              在每一个你需要的时刻，希望 我们都能陪你度过。
+              在每一個你需要的時刻，希望 我們都能陪你度過。
             </p>
             <Image
               className="absolute -scale-x-75 scale-75 -top-3 -left-2 -rotate-12"
@@ -48,23 +48,23 @@ export default function Home() {
         <Card
           imgsrc="/home/heart2.svg"
           alt="heart"
-          title="你不孤单"
-          content="当你孤单的时候，请相信，我们也正在找你，希望给你一个温暖的拥抱"
-          buttonText="加入我们"
+          title="你不孤單"
+          content="當你孤單的時候，請相信，我們也正在找你，希望給你一個溫暖的擁抱"
+          buttonText="加入我們"
           href="/contact-us"
         ></Card>
         <Card
           imgsrc="/home/eye.png"
           alt="awareness"
-          title="癌友见证"
-          content="听听乳癌病友如何从主爱粉丝团得到帮助，重拾健康，活出精彩人生"
-          buttonText="了解更多"
+          title="癌友見證"
+          content="聽聽乳癌病友如何從主愛粉絲團得到幫助，重拾健康，活出精彩人生"
+          buttonText="瞭解更多"
           href="/patients/testimonies"
         ></Card>
         <Card
           imgsrc="/home/social.svg"
           alt="services"
-          title="我们的服务"
+          title="我們的服務"
           content={
             <ul className="list-disc">
               <li>
@@ -80,7 +80,7 @@ export default function Home() {
                   href="/services/online"
                   className="text-blue-400 underline"
                 >
-                  每周线上癌友会
+                  每週線上癌友會
                 </Link>
               </li>
               <li>
@@ -88,7 +88,7 @@ export default function Home() {
                   href="/services/in-person"
                   className="text-blue-400 underline"
                 >
-                  实体癌友会
+                  實體癌友會
                 </Link>
               </li>
               <li>
@@ -96,12 +96,12 @@ export default function Home() {
                   href="/services/lectures"
                   className="text-blue-400 underline"
                 >
-                  医疗、心理讲座
+                  醫療、心理講座
                 </Link>
               </li>
             </ul>
           }
-          buttonText="了解更多"
+          buttonText="瞭解更多"
           href="/services/wechat"
         ></Card>
       </div>

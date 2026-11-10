@@ -11,10 +11,10 @@ export function FooterBody() {
         <div className="bg-surface-container pt-4 pb-4 drop-shadow-md">
           <div className="text-center p-4 [border-image:url(/home/vines.png)_45_0_/_20px_0px_repeat] border-0 border-t-[20px] border-b-[20px]">
             <div className="m-auto max-w-2xl">
-              我们最想传递的祝福“爱来癌去”，不是说癌症会凭空消失，而是说：爱能把恐惧慢慢带走,
-              爱能在治疗中 带来力量,
-              爱能让我们重新找回笑声。癌症的确可怕。但当一个人不再孤单时，它就没有那么可怕了。
-              在这里，我们听你、陪你、理解你, 因为我们走过一样的路。
+              我們最想傳遞的祝福“愛來癌去”，不是說癌症會憑空消失，而是說：愛能把恐懼慢慢帶走,
+              愛能在治療中 帶來力量,
+              愛能讓我們重新找回笑聲。癌症的確可怕。但當一個人不再孤單時，它就沒有那麼可怕了。
+              在這裡，我們聽你、陪你、理解你, 因為我們走過一樣的路。
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@ export function FooterBody() {
           href="https://youtube.com/playlist?list=PL5NWTqwwolFq1gtyqgnFtskxwFrDiP6yW"
         >
           <div className="text-4xl p-2">👉</div>
-          更多抗癌故事, 请点这个链接
+          更多抗癌故事, 請點這個鏈接
         </a>
       )
   }

@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <main className="flex flex-col gap-8 p-8 items-center max-w-4xl mx-auto">
       <h1 className="flex justify-center items-center gap-4 text-2xl text-primary">
-        实体癌友会
+        實體癌友會
         <Image
           className="w-20"
           src="/services/camera.webp"
@@ -14,20 +14,20 @@ export default function Page() {
         />
       </h1>
       <p>
-        每个关怀区域会不定期举行各式活动，例如郊游、聚餐、一起探访癌友等活动，彼此支持联络感情，抗癌路上不孤单。
+        每個關懷區域會不定期舉行各式活動，例如郊遊、聚餐、一起探訪癌友等活動，彼此支持聯絡感情，抗癌路上不孤單。
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-6">
         <ImageWithCaption
           image="/services/collage/1.jpeg"
-          caption="美东南区新春聚餐，满桌子的爱"
+          caption="美東南區新春聚餐，滿桌子的愛"
         />
         <ImageWithCaption
           image="/services/collage/2.jpeg"
-          caption="美西区聚会，治疗期间的幕后英雄-配偶，一起来相見"
+          caption="美西區聚會，治療期間的幕後英雄-配偶，一起來相見"
         />
         <ImageWithCaption
           image="/services/collage/3.jpeg"
-          caption="加拿大区一起出游，享受大自然"
+          caption="加拿大區一起出遊，享受大自然"
         />
         <ImageWithCaption
           image={
@@ -58,7 +58,7 @@ export default function Page() {
               </div>
             </div>
           }
-          caption="加拿大区一起聚聚包饺子"
+          caption="加拿大區一起聚聚包餃子"
         />
       </div>
     </main>

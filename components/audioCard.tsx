@@ -29,7 +29,7 @@ export function AudioCard({ data, id }: { data: Audio; id?: string }) {
             className="bg-gray-200 p-2 rounded-md mt-auto mb-auto min-w-24"
             onClick={() => setShowAudio(true)}
           >
-            播放音频
+            播放音頻
           </button>
         )}
       </div>

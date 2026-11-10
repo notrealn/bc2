@@ -8,62 +8,62 @@ export default function Page() {
         <h1 className="text-primary text-2xl">癌友互助微信群</h1>
       </div>
       <div className="font-semibold">
-        我们有多个不同功能的微信群，让癌友能随时随地在上面和其它战友交流讯息、互吐心事。每一位入群的申请，皆经过群主的审查，只有乳癌患者才能加入，提供姐妹们一个安全的交流园地。目前有如下的微信群:
+        我們有多個不同功能的微信群，讓癌友能隨時隨地在上面和其它戰友交流訊息、互吐心事。每一位入群的申請，皆經過群主的審查，只有乳癌患者才能加入，提供姐妹們一個安全的交流園地。目前有如下的微信群:
       </div>
       <div className="flex flex-col md:gap-8 md:flex-row">
         <div>
-          <Section title="第一大类: 主群">
-            这是病友人数最多的群，你在治疗中许多五花八门的大小疑问，诸如:
-            假发那买?去医院手术要带什么等?
-            在本群的众多病友都经历过，也很热心的分享她们的经验
+          <Section title="第一大類: 主群">
+            這是病友人數最多的群，你在治療中許多五花八門的大小疑問，諸如:
+            假髮那買?去醫院手術要帶什麼等?
+            在本群的眾多病友都經歷過，也很熱心的分享她們的經驗
           </Section>
-          <Section title="第二大类: 乳癌分型群">
-            可按自己乳癌的分型加入, 这里的病友都是同一型的, 所以,
-            可针对自己的乳癌分型治疗，有更深入的交流
+          <Section title="第二大類: 乳癌分型群">
+            可按自己乳癌的分型加入, 這裡的病友都是同一型的, 所以,
+            可針對自己的乳癌分型治療，有更深入的交流
             <ol className="list-decimal list-inside">
-              <li>三阴群</li>
+              <li>三陰群</li>
               <li>Her2群</li>
-              <li>基因突变群</li>
+              <li>基因突變群</li>
               <li>重建群</li>
             </ol>
           </Section>
-          <Section title="第三大类: 区域关怀群">
-            由于我们服务的对象来自世界各地，所以，按地理位置划分为不同的关怀区域，让病友们能私下见见面、彼此探访等等
+          <Section title="第三大類: 區域關懷群">
+            由於我們服務的對象來自世界各地，所以，按地理位置劃分為不同的關懷區域，讓病友們能私下見見面、彼此探訪等等
             <ol className="list-decimal list-inside">
-              <li>美东南区</li>
-              <li>美东北区</li>
-              <li>美中区</li>
-              <li>美西区</li>
-              <li>加拿大区</li>
-              <li>中国区</li>
+              <li>美東南區</li>
+              <li>美東北區</li>
+              <li>美中區</li>
+              <li>美西區</li>
+              <li>加拿大區</li>
+              <li>中國區</li>
             </ol>
           </Section>
         </div>
         <div>
-          <Section title="第四大类: 养生保健群">
-            正规治疗的结束并不是抗癌路的终点，之后如何借由饮食、运动等等来强化自体免疫力，才能提高生活品质、降低复发的机会
+          <Section title="第四大類: 養生保健群">
+            正規治療的結束並不是抗癌路的終點，之後如何藉由飲食、運動等等來強化自體免疫力，才能提高生活品質、降低復發的機會
             <ol className="list-decimal list-inside">
               <li>
-                葡萄园喝汤群: 一起学习健康饮食，每天打卡喝汤，分享彼此饮食心得.
+                葡萄園喝湯群: 一起學習健康飲食，每天打卡喝湯，分享彼此飲食心得.
               </li>
               <li>
-                运动群:
-                一起坚持运动打卡，交流运动心得，减少治疗副作用，增强体质.
+                運動群:
+                一起堅持運動打卡，交流運動心得，減少治療副作用，增強體質.
               </li>
               <li>
-                唱诗歌群: 唱歌对身心灵有许多好处，姐妹们每日一起打卡唱歌,好欢乐!
+                唱詩歌群: 唱歌對身心靈有許多好處，姐妹們每日一起打卡唱歌,好歡樂!
               </li>
             </ol>
           </Section>
-          <Section title="第五大类: 心灵支持">
-            治疗后是否仍提心吊胆、一有风吹草动就担心复发? 圣经有句经文:
-            喜樂的心乃是良药! 在这里, 每天有义工陪伴读圣经祷告等等,
-            让你借由依靠神, 开始有超乎境遇的平安喜乐
+          <Section title="第五大類: 心靈支持">
+            治療後是否仍提心吊膽、一有風吹草動就擔心復發? 聖經有句經文:
+            喜樂的心乃是良藥! 在這裡, 每天有義工陪伴讀聖經禱告等等,
+            讓你藉由依靠神, 開始有超乎境遇的平安喜樂
             <ol className="list-decimal list-inside">
-              <li>美东晨祷群</li>
-              <li>美西晨祷群</li>
-              <li>每日背经群</li>
-              <li>研读圣经团契 (主爱查经&BSF)</li>
+              <li>美東晨禱群</li>
+              <li>美西晨禱群</li>
+              <li>每日背經群</li>
+              <li>研讀聖經團契 (主愛查經&BSF)</li>
             </ol>
           </Section>
           <div className="relative size-fit m-auto p-4">
@@ -77,9 +77,9 @@ export default function Page() {
               className="absolute inset-0 flex flex-col justify-center items-center z-10 text-black text-center"
               href="/contact-us"
             >
-              请联系我们，
+              請聯繫我們，
               <br />
-              询问加入方式
+              詢問加入方式
               <Image src="/heart.svg" alt="heart" width={24} height={24} />
             </Link>
           </div>
