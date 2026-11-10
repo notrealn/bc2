@@ -156,7 +156,7 @@ function PageLink({ text, href }: { text: string; href: string }) {
 function SupportUs() {
   return (
     <Link
-      href="https://www.cchcla.org/donation/gigforever/"
+      href="/donate"
       className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg w-fit"
     >
       <div className="text-xl p-3 pr-0">支持我们</div>
