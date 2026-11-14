@@ -159,11 +159,14 @@ function SupportUs() {
       href="/donate"
       className="flex flex-row items-center rounded-3xl bg-primary text-on-primary shadow-lg w-fit"
     >
-      <div className="text-xl p-3 pr-0">支持我们</div>
+      <span className="flex flex-col p-3 pr-0 leading-tight">
+        <span lang="zh-Hans" className="text-xl">支持我们</span>
+        <span lang="en" className="text-sm">Support Us</span>
+      </span>
       <Image
         className="p-2 overflow-visible m-2"
         src="/support-us.svg"
-        alt="support us!"
+        alt=""
         width={48}
         height={48}
       />

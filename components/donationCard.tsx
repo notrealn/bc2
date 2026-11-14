@@ -1,11 +1,45 @@
+const cardClassName =
+  "text-center overflow-hidden rounded-3xl border border-[#f0d5df] bg-[#fbedef] text-[#545454]";
+const cardGridClassName =
+  "grid items-center gap-7 px-6 py-8 sm:px-10 md:grid-cols-[.75fr_1.4fr] md:gap-10 md:py-10";
+const cardBrandClassName =
+  "text-center md:border-r md:border-[#eab8cc] md:py-8 md:pr-10";
+
+export function StripeDonationCard({ paymentLink }: { paymentLink: string }) {
+  return (
+    <section aria-label="Stripe" className={cardClassName}>
+      <div className={cardGridClassName}>
+        <div className={cardBrandClassName}>
+          <h3 className="text-6xl font-bold tracking-tight text-[#635bff] md:text-7xl">
+            Stripe
+          </h3>
+        </div>
+        <div>
+          <p className="text-lg leading-8 sm:text-xl">
+            通过 Stripe 使用信用卡捐款。
+          </p>
+          <p lang="en" className="mb-4 text-base leading-7">
+            Donate by credit card through Stripe.
+          </p>
+          <a
+            href={paymentLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-wrap items-center justify-center gap-x-2 rounded-xl bg-[#a83c64] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#81284b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a83c64]"
+          >
+            信用卡捐款 <span lang="en">Donate by credit card</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function DonationCard() {
   return (
-    <div
-      lang="zh-Hans"
-      className="text-center overflow-hidden rounded-3xl border border-[#f0d5df] bg-[#fbedef] text-[#545454]"
-    >
-      <div className="grid items-center gap-7 px-6 py-8 sm:px-10 md:grid-cols-[.75fr_1.4fr] md:gap-10 md:py-10">
-        <div className="text-center md:border-r md:border-[#eab8cc] md:py-8 md:pr-10">
+    <div lang="zh-Hans" className={cardClassName}>
+      <div className={cardGridClassName}>
+        <div className={cardBrandClassName}>
           <div className="text-6xl font-bold tracking-tight text-[#6d1ed4] md:text-7xl">
             Zelle
           </div>
@@ -14,8 +48,11 @@ export default function DonationCard() {
           </p>
         </div>
         <div className="min-w-0">
-          <p className="mb-4 text-lg leading-8 sm:text-xl">
+          <p className="text-lg leading-8 sm:text-xl">
             使用您银行的 Zelle 服务，捐款至以下 ID：
+          </p>
+          <p lang="en" className="mb-4 text-base leading-7">
+            Use your bank&apos;s Zelle service to donate to the following ID.
           </p>
           <div className="rounded-2xl border border-[#edc6d5] bg-white/70 px-6 py-5">
             <p className="text-base font-medium tracking-wide text-[#a83c64]">
@@ -54,11 +91,18 @@ export default function DonationCard() {
             </h3>
             <p className="mt-2 text-lg leading-8">
               请在 <span className="font-semibold">Memo 栏</span>注明您
-              <span className="font-semibold">家里的地址和邮寄地址</span>
+              <span className="font-semibold">邮寄地址和电子邮件地址</span>
               ，以便寄送正式捐款收据。
+            </p>
+            <p lang="en" className="mt-1 text-base leading-7">
+              Please note your mailing address and email address in the Memo
+              section so we can send you an official donation receipt.
             </p>
             <p className="mt-4 text-lg leading-8">
               如有任何疑问，欢迎通过电子邮件联系我们：
+            </p>
+            <p lang="en" className="text-base leading-7">
+              If you have any questions, feel free to contact us by email:
             </p>
             <a
               className="mt-1 inline-block max-w-full break-all rounded-sm text-lg font-medium leading-8 text-[#a83c64] underline decoration-[#d99ab1] underline-offset-4 transition-colors hover:text-[#81284b] hover:decoration-current focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a83c64]"
