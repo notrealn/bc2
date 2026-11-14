@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import DonationCard from "@/components/donationCard";
+import DonationCard, { StripeDonationCard } from "@/components/donationCard";
 import styles from "./donate.module.css";
 
 export const metadata: Metadata = {
   title: "支持我们 | GIG FOREVER",
   description: "通过 Zelle 支持 GIG Forever，陪伴华人乳腺癌患者及家人。",
 };
+
+const stripePaymentLink = "https://buy.stripe.com/00wdR89jh76z6uE0zC9R601";
 
 export default function DonatePage() {
   return (
@@ -49,21 +51,10 @@ export default function DonatePage() {
         <h2 id="support-heading" className={styles.supportHeading}>
           支持主爱粉丝团的姐妹
         </h2>
-        <DonationCard />
-        <p className="mt-4 flex items-center justify-center gap-3 rounded-2xl border border-[#f0d5df] bg-[#fbedef] px-4 py-3 text-center text-base font-semibold text-[#a83c64] sm:text-lg">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            className="size-6 shrink-0"
-            aria-hidden="true"
-          >
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <path d="M3 10h18m-14 5h3" strokeLinecap="round" />
-          </svg>
-          <span>信用卡捐款通道正在建设中，敬请期待！</span>
-        </p>
+        <div className="grid gap-4">
+          <StripeDonationCard paymentLink={stripePaymentLink} />
+          <DonationCard />
+        </div>
         <section className={styles.funds} aria-labelledby="funds-heading">
           <h2 id="funds-heading" className={styles.fundsHeading}>
             <span aria-hidden="true">♥</span>
