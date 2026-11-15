@@ -7,11 +7,17 @@ const cardBrandClassName =
 
 export function StripeDonationCard({ paymentLink }: { paymentLink: string }) {
   return (
-    <section aria-label="Stripe" className={cardClassName}>
+    <section aria-labelledby="credit-card-donation-heading" className={cardClassName}>
       <div className={cardGridClassName}>
         <div className={cardBrandClassName}>
-          <h3 className="text-6xl font-bold tracking-tight text-[#635bff] md:text-7xl">
-            Stripe
+          <h3
+            id="credit-card-donation-heading"
+            className="text-3xl font-bold tracking-tight text-[#635bff] md:text-4xl"
+          >
+            信用卡捐款
+            <span lang="en" className="mt-2 block text-lg tracking-wide">
+              CREDIT CARD
+            </span>
           </h3>
         </div>
         <div>
